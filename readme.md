@@ -39,3 +39,5 @@
 - 🚀 [ShopManager Live Demo](https://smart-inventory-management-system-frontend.vercel.app/) 
 
 ---
+
+<!-- update 5559 -->
