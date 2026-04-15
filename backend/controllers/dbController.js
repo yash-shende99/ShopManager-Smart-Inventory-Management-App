@@ -11,3 +11,4 @@ await mongoose.connect(process.env.MONGO_URL)
         console.log('Error Occured in mongodb Connection',error);
         
 })
+// minor update 7038
