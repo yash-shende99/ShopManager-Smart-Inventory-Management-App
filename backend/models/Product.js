@@ -24,3 +24,4 @@ productSchema.pre('save', function(next) {
 const Product = mongoose.model('Product', productSchema);
 
 export default Product;
+// minor update 5119
