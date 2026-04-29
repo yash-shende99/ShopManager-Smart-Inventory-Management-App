@@ -81,3 +81,4 @@ const getSupplier = async (req, res) => {
 
 // Export both functions together
 export { addSupplier, getSupplier };
+// minor update 5671
