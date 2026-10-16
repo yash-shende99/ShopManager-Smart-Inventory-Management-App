@@ -1,171 +1,426 @@
-# 🛒 ShopManager — Smart Inventory Management & Retail POS System
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     SHOPMANAGER · Terminal Retail OS
+     POS · Inventory · Credit Ledger · Analytics
+     ═══════════════════════════════════════════════════════════════════════════ -->
 
-[![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=flat-square&logo=react&logoColor=black)](https://react.dev/)
-[![Vite](https://img.shields.io/badge/Vite-6.2.5-646CFF?style=flat-square&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Node.js](https://img.shields.io/badge/Node.js-18%20%7C%2020-339933?style=flat-square&logo=node.js&logoColor=white)](https://nodejs.org/)
-[![Express.js](https://img.shields.io/badge/Express-5.1.0-000000?style=flat-square&logo=express&logoColor=white)](https://expressjs.com/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose%208.13-47A248?style=flat-square&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.13-38B2AC?style=flat-square&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![License: ISC](https://img.shields.io/badge/License-ISC-blue?style=flat-square)](backend/package.json)
+<div align="center">
 
-> A modern, web-based Point of Sale (POS), QR-assisted inventory management, and customer credit ledger system engineered specifically for small and medium retail merchants.
+```
+╔══════════════════════════════════════════════════════════════════════════════╗
+║  ┌──────────────────────────────────────────────────────────────────────┐    ║
+║  │  ███████╗██╗  ██╗ ██████╗ ██████╗     ███╗   ███╗ ██████╗ ██████╗    │    ║
+║  │  ██╔════╝██║  ██║██╔═══██╗██╔══██╗    ████╗ ████║██╔════╝ ██╔══██╗   │    ║
+║  │  ███████╗███████║██║   ██║██████╔╝    ██╔████╔██║██║  ███╗██████╔╝   │    ║
+║  │  ╚════██║██╔══██║██║   ██║██╔═══╝     ██║╚██╔╝██║██║   ██║██╔══██╗   │    ║
+║  │  ███████║██║  ██║╚██████╔╝██║         ██║ ╚═╝ ██║╚██████╔╝██║  ██║   │    ║
+║  │  ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝         ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝   │    ║
+║  │                                                                      │    ║
+║  │  ▓▓▓▓▓▓░░▓▓▓░▓▓░▓▓▓▓▓░░▓▓▓▓▓░▓▓▓░░▓▓▓▓░░▓▓▓▓▓░░▓▓▓░▓▓▓▓▓░▓▓▓▓▓░░▓▓▓  │    ║
+║  │  RETAIL OS · v1.0 · SM-INV-2025 · STORE #0001 · ONLINE              │    ║
+║  └──────────────────────────────────────────────────────────────────────┘    ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+```
 
----
+# 🛒 SHOPMANAGER
 
-## 📑 Table of Contents
+### Smart Inventory Management · Retail POS · Customer Credit Ledger
 
-- [Overview](#overview)
-  - [The Problem](#the-problem)
-  - [The Solution](#the-solution)
-  - [Target Audience](#target-audience)
-- [Key Features](#key-features)
-  - [1. Point of Sale (POS) & Fast Billing](#1-point-of-sale-pos--fast-billing)
-  - [2. Inventory & Stock Management](#2-inventory--stock-management)
-  - [3. Customer Credit Ledger ("Borrow Account") & Debt Recovery](#3-customer-credit-ledger-borrow-account--debt-recovery)
-  - [4. Supplier Invoice & Payment Tracking](#4-supplier-invoice--payment-tracking)
-  - [5. Visual Analytics & Reporting](#5-visual-analytics--reporting)
-  - [6. Local Operational Notepad](#6-local-operational-notepad)
-- [Screenshots & Visual Tour](#screenshots--visual-tour)
-- [Technology Stack](#technology-stack)
-- [System Architecture](#system-architecture)
-- [Repository Structure](#repository-structure)
-- [Prerequisites](#prerequisites)
-- [Installation & Setup](#installation--setup)
-  - [1. Clone the Repository](#1-clone-the-repository)
-  - [2. Configure the Backend](#2-configure-the-backend)
-  - [3. Configure the Frontend](#3-configure-the-frontend)
-- [Environment Variables](#environment-variables)
-- [Running the Application](#running-the-application)
-  - [Local Development](#local-development)
-  - [Running with Docker Compose](#running-with-docker-compose)
-- [User Walkthrough](#user-walkthrough)
-- [API Reference](#api-reference)
-- [Database & Data Models](#database--data-models)
-- [Testing & Code Quality](#testing--code-quality)
-- [Deployment Configuration](#deployment-configuration)
-- [Security & Privacy Considerations](#security--privacy-considerations)
-- [Troubleshooting & FAQ](#troubleshooting--faq)
-- [Known Limitations & Current Status](#known-limitations--current-status)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-- [License](#license)
-- [Author & Links](#author--links)
+**`[ INVENTORY ] · [ POS ] · [ KHATA ] · [ ANALYTICS ] · [ SUPPLIER ] · [ QR ]`**
+
+<br>
+
+[![React](https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-6.2.5-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Node.js](https://img.shields.io/badge/Node.js-18_|_20-339933?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express-5.1.0-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
+
+[![MongoDB](https://img.shields.io/badge/MongoDB-Mongoose_8.13-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+[![Tailwind](https://img.shields.io/badge/Tailwind_CSS-3.4.13-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=for-the-badge&logo=docker&logoColor=white)](https://www.docker.com/)
+[![Vercel](https://img.shields.io/badge/Vercel-Deployed-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+
+<br>
+
+<a href="https://smart-inventory-management-system-frontend.vercel.app/"><b>▶ &nbsp;LAUNCH LIVE STORE</b></a>
+
+</div>
 
 ---
 
-## 🌟 Overview
-
-### The Problem
-
-Small retail merchants and convenience shopkeepers (such as local kirana stores, hardware shops, and general trading outlets) struggle with disconnected, manual store operations:
-
-1. **Paper Ledgers ("Khata") Friction**: Customer credit balances and partial repayments are written in paper notebooks that get lost, damaged, or contested.
-2. **Slow Checkout Queues**: Manual price memorization and paper receipts slow down peak-hour billing.
-3. **Inventory Shrinkage & Expiration Waste**: Perishable stock expires unnoticed on back shelves, and stock shortages happen unexpectedly without threshold alerts.
-4. **Disorganized Supplier Invoices**: Paper vendor invoices and cash payment slips are hard to reconcile against delivered stock.
-5. **High Software Costs**: Enterprise POS systems require expensive proprietary barcode scanners, heavy desktop computers, and recurring subscription fees.
-
-### The Solution
-
-**ShopManager** bridges the gap between pen-and-paper operations and enterprise retail software. It delivers a fast, responsive Single Page Application (SPA) accessible on any mobile device, tablet, or PC browser. ShopManager turns standard device cameras into real-time barcode/QR scanners, automates stock decrements upon sale, maintains an audit-logged customer credit ledger with automated email payment reminders, enables frictionless digital receipt sharing via WhatsApp, and provides visual stock analytics without proprietary hardware requirements.
-
-### Target Audience
-
-- **Independent Retailers & Merchants**: Grocery stores, local marts, apparel stores, and electronics accessory shops.
-- **Store Managers & Cashiers**: Requiring a clean, error-resistant POS interface with instant receipt printing.
-- **Hiring Managers & Technical Reviewers**: Evaluating a real-world, full-stack MERN application demonstrating authentication, hardware API integration (camera/scanner), transactional MongoDB workflows, third-party cloud integrations (Cloudinary, Nodemailer), and containerization.
+```
+  ┌─ SESSION START ─────────────────────────────────────────────────────────┐
+  │  terminal@shopmanager:~$                                               │
+  │                                                                         │
+  │  ▸ Storefront ready                                                     │
+  │  ▸ Inventory synchronized                                               │
+  │  ▸ POS terminal online                                                  │
+  │  ▸ Khata ledger loaded                                                  │
+  │  ▸ Awaiting merchant sign-in...                                        │
+  │                                                                         │
+  │  ─────────────────────────────────────────────────────────────────────  │
+  │  Customers in queue: 0  ·  Open bills: 0  ·  Stock alerts: 0            │
+  └─────────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
-## 🚀 Key Features
+## 🧾 Manifest
 
-### 1. Point of Sale (POS) & Fast Billing
-- **Real-Time Barcode & QR Code Scanning**: Utilizes the device camera via `qr-scanner` to read product QR labels directly into the active cart without manual typing.
-- **Dynamic Cart Calculations**: Automatically computes item totals, percentage-based discounts, net quantities, and grand totals.
-- **Immediate Stock Sync**: Every completed bill automatically verifies stock availability and decrements inventory in MongoDB within the same checkout workflow.
-- **Split Payment & Credit Deposits**: Allows customers to pay in full or pay a partial deposit, automatically forwarding unpaid balances to the customer's borrow ledger.
-- **Instant Receipts**: Generates print-ready thermal/A4 invoices via `react-to-print` and exportable digital PDF receipts via `jspdf`.
-- **WhatsApp Invoice Delivery**: Formats the complete itemized bill summary into a pre-populated message and opens WhatsApp Web / WhatsApp Mobile directly via the WhatsApp Click-to-Chat protocol (`wa.me`).
+<table>
+<tr>
+<td valign="top" width="33%">
 
-### 2. Inventory & Stock Management
-- **Product Catalog Management**: Track product name, category, cost price (actual price), selling price, quantity on hand, minimum reorder thresholds, supplier names, discount rates, and expiration dates.
-- **Dynamic QR Code Generation**: Generates scannable QR codes for each inventory item using the QRServer API (`https://api.qrserver.com/`), printable directly for shelf and product labeling.
-- **Inventory Health Badges**: Color-coded stock indicators classifying items as **In Stock**, **Low Stock** (quantity $\le$ reorder level), or **Out of Stock**.
-- **Perishable Expiration Tracking**: Flags products as **Fresh**, **Expiring Soon** (within 30 days), or **Expired**.
-- **Inline Stock Adjustments**: Fast modals for updating stock quantities, cost prices, and selling prices without recreating records.
+### `# INVENTORY`
+- [Overview](#-overview)
+- [Key Features](#-key-features)
+- [Screenshots](#-screenshots--visual-tour)
 
-### 3. Customer Credit Ledger ("Borrow Account") & Debt Recovery
-- **Customer Directory**: Centralized ledger mapping customer profiles (name, phone number, email) to purchase records.
-- **Credit & Debt Calculation**: Aggregates all historical bills for each customer to show lifetime purchases, total deposits paid, and current net outstanding balance.
-- **Repayment History Log**: Allows cashiers to record installments against unpaid bills, logging each payment with timestamps and payment methods (`Cash`, `Credit Card`, `Debit Card`, `Mobile Payment`).
-- **Automated Email Payment Reminders**: Built-in batch notification engine powered by `nodemailer` that filters customers with overdue balances past a configurable day threshold (default: 5+ days) and dispatches formatted HTML balance summaries.
-- **One-Click WhatsApp Reminders**: Direct link to trigger a personalized payment reminder to the customer's registered phone number.
+### `# STACK`
+- [Technology Stack](#-technology-stack)
+- [Architecture](#-system-architecture)
+- [Repo Layout](#-repository-structure)
 
-### 4. Supplier Invoice & Payment Tracking
-- **Vendor Ledger**: Maintains supplier profiles, invoice dates, agreed payments, and deposits made.
-- **Cloud Receipt Archival**: Enables merchants to upload physical supplier bills (JPEG/PNG up to 5MB) via `multer`, securely stored and served via Cloudinary.
-- **Outstanding Payable Balance**: Calculates real-time remaining liabilities owed to each distributor.
+</td>
+<td valign="top" width="33%">
 
-### 5. Visual Analytics & Reporting
-- **MongoDB Charts Integration**: Embeds 8 live visual analytics panels using `@mongodb-js/charts-embed-dom` with automatic 5-minute data refreshes:
-  - Current Stock Levels vs. Reorder Thresholds
-  - Stock Status Overview
-  - Expiration Date Monitoring
-  - Product Sales Volume
-  - Total Sales per Day
-  - Top-Selling Products
-  - Average Transaction per Month
-  - Total Quantity Sold
-- **Interactive Invoices Calendar**: Filter and audit transaction history by specific day or month with aggregate daily revenue summaries.
+### `# DEPLOY`
+- [Prerequisites](#-prerequisites)
+- [Installation](#-installation--setup)
+- [Environment](#-environment-variables)
+- [Running](#-running-the-application)
 
-### 6. Local Operational Notepad
-- **In-Browser Scratchpad**: Quick note-taking feature saved to `localStorage` for staff to jot down return requests, broken packaging, customer requests, or handover notes.
+### `# USE`
+- [User Walkthrough](#-user-walkthrough)
+- [API Reference](#-api-reference)
+- [Data Models](#-database--data-models)
+
+</td>
+<td valign="top" width="33%">
+
+### `# OPS`
+- [Testing](#-testing--code-quality)
+- [Deployment](#-deployment-configuration)
+- [Security](#-security--privacy-considerations)
+
+### `# REF`
+- [Troubleshooting](#-troubleshooting--faq)
+- [Roadmap](#-roadmap)
+- [Contributing](#-contributing)
+
+</td>
+</tr>
+</table>
+
+---
+
+## 🧾 Overview
+
+### `> PROBLEM.LOG`
+
+```
+  ┌─────────────────────────────────────────────────────────────────────────┐
+  │  ⚠  KIRANA STORE PAIN POINTS                                            │
+  ├─────────────────────────────────────────────────────────────────────────┤
+  │                                                                         │
+  │  [01]  PAPER KHATA FRICTION                                            │
+  │        Credit balances written in notebooks → lost, damaged, disputed  │
+  │                                                                         │
+  │  [02]  CHECKOUT QUEUE BOTTLENECK                                       │
+  │        Manual price lookup · paper receipts · peak-hour gridlock       │
+  │                                                                         │
+  │  [03]  INVENTORY SHRINKAGE & EXPIRATION WASTE                          │
+  │        Perishables expire on back shelves · no reorder alerts          │
+  │                                                                         │
+  │  [04]  UNRECONCILED SUPPLIER INVOICES                                  │
+  │        Paper vendor slips scattered · no payable tracking              │
+  │                                                                         │
+  │  [05]  ENTERPRISE POS COST BARRIER                                     │
+  │        Proprietary scanners · desktops · recurring SaaS fees           │
+  │                                                                         │
+  └─────────────────────────────────────────────────────────────────────────┘
+```
+
+### `> SOLUTION.DIFF`
+
+```
+  ┌─────────────────────────────┐     ┌─────────────────────────────────┐
+  │  BEFORE                     │     │  AFTER                          │
+  │  ───────                    │  →  │  ─────                          │
+  │                             │     │                                 │
+  │  Paper khata notebook       │     │  Digital credit ledger          │
+  │  Manual price lookup        │     │  Camera QR scanning             │
+  │  Silent stock-outs          │     │  Threshold alerts + expiry tags │
+  │  Scattered invoices         │     │  Cloudinary-archived receipts   │
+  │  ₹5,000+ POS subscriptions  │     │  ₹0 — runs on any device        │
+  │                             │     │                                 │
+  └─────────────────────────────┘     └─────────────────────────────────┘
+```
+
+**ShopManager** = POS terminal + QR inventory + Khata ledger + supplier tracking + analytics — **all in one mobile-friendly SPA**. Turns any phone/tablet/PC browser into a full retail management station.
+
+### `> TARGET.SEGMENTS`
+
+```
+  ┌─────────────────────────┬──────────────────────────────────────────────┐
+  │  🏪 MERCHANTS           │  Kirana · hardware · apparel · electronics   │
+  ├─────────────────────────┼──────────────────────────────────────────────┤
+  │  👥 STORE STAFF         │  Cashiers · managers · floor supervisors     │
+  ├─────────────────────────┼──────────────────────────────────────────────┤
+  │  🧑‍💻 REVIEWERS          │  Full-stack MERN · JWT · transactional DB    │
+  │                         │  camera APIs · cloud media · containerized   │
+  └─────────────────────────┴──────────────────────────────────────────────┘
+```
+
+---
+
+## ⚙️ Key Features
+
+### `[ 01 ]` POS Terminal · Fast Billing
+
+```
+  ┌─ SCAN ────────────────┐    ┌─ CART ─────────────────────────────┐
+  │  ▓▓▓▓░░▓▓░▓▓▓▓░▓▓▓░░  │    │  SKU-1042  Dettol 250ml    × 2     │
+  │  ▓▓░▓▓▓▓░░▓▓░▓▓▓▓▓░▓  │ →  │  SKU-2210  Maggi 12-pack   × 1     │
+  │  ▓▓▓▓▓░▓▓▓░▓▓▓░▓▓▓▓▓  │    │  SKU-3187  Colgate Strong  × 3     │
+  │  camera-live · qr-scan│    │  ─────────────────────────────     │
+  └───────────────────────┘    │  Subtotal        ₹ 487.00          │
+                               │  Discount (5%)   −₹ 24.35          │
+                               │  ─────────────────────────────     │
+                               │  TOTAL          ₹ 462.65           │
+                               └────────────────────────────────────┘
+```
+
+| Capability | Stack |
+|:---|:---|
+| 🎥 **Live QR/barcode scanning** | `qr-scanner` via device camera |
+| 🧮 **Dynamic cart math** | Subtotal · % discount · net qty · grand total |
+| 📦 **Atomic stock decrement** | Same MongoDB workflow on checkout |
+| 💰 **Split payment / credit deposit** | Unpaid → customer borrow ledger |
+| 🖨️ **Instant receipts** | `react-to-print` · thermal / A4 |
+| 📄 **Vector PDF export** | `jspdf` |
+| 📱 **WhatsApp invoice delivery** | `wa.me` Click-to-Chat protocol |
+
+---
+
+### `[ 02 ]` Inventory & Stock Control
+
+```
+  ┌─ CATALOG GRID ───────────────────────────────────────────────────────┐
+  │                                                                      │
+  │   ▓▓▓▓▓▓▓▓  ▓▓▓▓▓▓▓▓  ▓▓▓▓▓▓▓▓  ▓▓▓▓▓▓▓▓                            │
+  │   Parle-G   Amul      Surf      Tata                                │
+  │   ✅ IN     ⚠ LOW     ✅ IN     🔴 OUT                              │
+  │   ₹10       ₹58       ₹120      ₹340                                │
+  │                                                                      │
+  │   ⏰ EXP:   Fresh  ·  Soon  ·  Expired                              │
+  └──────────────────────────────────────────────────────────────────────┘
+```
+
+| Feature | Detail |
+|:---|:---|
+| 📋 **Product catalog** | Name · category · cost · selling · qty · reorder level · supplier · discount · expiry |
+| 🔳 **QR generation** | `api.qrserver.com` · printable shelf/packaging labels |
+| 🚦 **Health badges** | ✅ In Stock · ⚠️ Low Stock (≤ reorder) · 🔴 Out of Stock |
+| ⏳ **Expiry tracking** | 🟢 Fresh · 🟡 Expiring in 30d · 🔴 Expired |
+| ⚡ **Inline edits** | Qty · cost · selling · no re-creation needed |
+
+---
+
+### `[ 03 ]` Customer Credit Ledger — Digital Khata
+
+> *The feature that replaces the notebook.*
+
+```
+  ┌─ LEDGER · Ramesh Kirana Customer ───────────────────────────────────┐
+  │                                                                     │
+  │  Lifetime purchases      ₹ 47,850.00                                │
+  │  Total paid              ₹ 42,500.00                                │
+  │  ────────────────────────────────────                               │
+  │  OUTSTANDING BALANCE     ₹  5,350.00   ⚠ 18 days overdue           │
+  │                                                                     │
+  │  Repayment history:                                                 │
+  │    12-Oct  ₹ 2,000  · Cash                                          │
+  │    05-Oct  ₹ 1,500  · UPI                                           │
+  │    28-Sep  ₹ 3,500  · Cash                                          │
+  │                                                                     │
+  │  [ 📧 Email Reminder ]  [ 💬 WhatsApp ]                             │
+  └─────────────────────────────────────────────────────────────────────┘
+```
+
+| Feature | Stack |
+|:---|:---|
+| 👤 **Customer directory** | Name · phone · email · lifetime value |
+| 📊 **Auto-aggregated balance** | Purchases − deposits = net outstanding |
+| 📝 **Repayment log** | Timestamp · amount · method (Cash/Card/UPI) |
+| 📧 **Batch overdue reminders** | `nodemailer` · HTML emails · configurable day threshold |
+| 💬 **One-click WhatsApp nudge** | Pre-filled message via `wa.me` |
+
+---
+
+### `[ 04 ]` Supplier Ledger
+
+```
+  ┌─ VENDOR ─────────────────────────────────────────────────────────────┐
+  │                                                                      │
+  │  Distributor        Invoice    Total      Paid      Owing            │
+  │  ──────────────────────────────────────────────────────────────      │
+  │  Sharma Wholesale   14-Oct    ₹52,000   ₹35,000   ₹17,000  📎       │
+  │  Krishna Traders    12-Oct    ₹28,500   ₹28,500   ₹     0  📎       │
+  │  Patel Distributor  09-Oct    ₹86,200   ₹60,000   ₹26,200  📎       │
+  │                                                                      │
+  │  📎 = Cloudinary-archived invoice scan                              │
+  └──────────────────────────────────────────────────────────────────────┘
+```
+
+- 📸 **Cloud invoice archival** — JPEG/PNG · 5 MB cap · Multer → Cloudinary
+- 💰 **Outstanding payable tracking** per distributor
+- 🗓️ **Invoice date audit** for reconciliation
+
+---
+
+### `[ 05 ]` Visual Analytics
+
+> *8 live MongoDB Charts panels embedded via `@mongodb-js/charts-embed-dom` · auto-refresh every 5 minutes.*
+
+```
+  ┌─────────────────────────────────────────────────────────────────────┐
+  │  ▓▓▓▓▓▓░░░░░░░░░░░░░░  Stock Levels vs Reorder Thresholds          │
+  │  ▓▓▓░░░░░░░░░▓▓▓▓▓▓▓▓  Product Sales Volume                        │
+  │  ▓▓▓▓▓▓▓▓▓▓▓▓▓░░░░░░  Top-Selling Products                         │
+  │  ▓▓░░▓▓░░▓▓░░▓▓░░▓▓░  Total Sales per Day                          │
+  │  ▓▓▓▓▓░░░░░▓▓▓▓░░░░░  Average Transaction / Month                 │
+  │  ▓▓░░░░░░▓▓▓▓▓▓▓░░░░  Expiration Date Monitoring                  │
+  │  ▓▓▓▓░░░░▓▓▓▓▓▓░░░░░  Stock Status Overview                       │
+  │  ▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓░░░  Total Quantity Sold                         │
+  └─────────────────────────────────────────────────────────────────────┘
+```
+
+Plus: 🗓️ **Interactive invoice calendar** — day/month filters with daily revenue summary.
+
+---
+
+### `[ 06 ]` Operational Scratchpad
+
+- 📝 **In-browser notepad** — persisted to `localStorage`
+- 🎯 For return requests · broken packaging · handover notes · quick reminders
+
+---
+
+## 📸 Screenshots · Visual Tour
+
+<table>
+<tr>
+<td width="50%" align="center">
+
+**🛒 POS Terminal**
+
+![Bill Generator](Frontend/public/billgen.png)
+
+<sub>Live camera scan · dynamic cart · one-click receipt</sub>
+
+</td>
+<td width="50%" align="center">
+
+**📦 Product Catalog**
+
+![Product List](Frontend/public/productlist.png)
+
+<sub>Stock + expiry badges · inline edits · QR print</sub>
+
+</td>
+</tr>
+<tr>
+<td width="50%" align="center">
+
+**➕ Add Product**
+
+![Add Product](Frontend/public/addproduct.png)
+
+<sub>Full metadata intake · supplier · expiry date</sub>
+
+</td>
+<td width="50%" align="center">
+
+**📊 Sales Analytics**
+
+![Sales Charts](Frontend/public/sales.png)
+
+<sub>Live MongoDB Charts · auto-refresh dashboard</sub>
+
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+
+**🧾 Invoice Archive**
+
+![Show Bill](Frontend/public/showbill.png)
+
+<sub>Calendar-filtered invoice history · daily revenue aggregation</sub>
+
+</td>
+</tr>
+</table>
 
 ---
 
 ## 🛠️ Technology Stack
 
-### Frontend
-| Technology | Version | Purpose in ShopManager |
-| :--- | :--- | :--- |
-| **React** | `18.3.1` | UI rendering, component lifecycle, and state reactivity |
-| **Vite** | `6.2.5` | Fast module bundler, dev server, and production build tooling |
-| **Tailwind CSS** | `3.4.13` | Utility-first responsive styling and layout system |
-| **React Router DOM** | `6.26.2` | Client-side routing, protected routes (`PrivateRoute`), and redirects |
-| **Context API** | Native | Application-wide shared state for tokens, bills, and customers (`StoreContext`) |
-| **Axios** | `1.7.7` | HTTP client for interacting with the Express REST API |
-| **Ant Design (`antd`)** | `5.24.6` | Pre-styled UI components and design icons |
-| **Framer Motion** | `12.6.3` | Fluid page transitions and micro-animations |
-| **Lucide React** / **React Icons** | `0.487.0` / `5.5.0` | Vector icon sets for navigation, actions, and status cards |
-| **QR Scanner** | `1.4.2` | High-performance HTML5 video camera barcode/QR code reader |
-| **jsPDF** | `3.0.1` | Client-side vector PDF generation for customer invoices |
-| **React-To-Print** | `3.0.1` | Native browser print dialog triggering for thermal/desktop printers |
-| **React Datepicker** | `8.3.0` | Calendar date picker used in invoice history filtering |
-| **MongoDB Charts SDK** | `3.3.1` | Embedded dashboard analytics rendered via `@mongodb-js/charts-embed-dom` |
-| **React Toastify** | `10.0.5` | Non-intrusive alert and notification banners |
+<table>
+<tr>
+<td valign="top" width="50%">
 
-### Backend
-| Technology | Version | Purpose in ShopManager |
-| :--- | :--- | :--- |
-| **Node.js** | `18.x` / `20.x` | Server-side JavaScript runtime environment |
-| **Express.js** | `5.1.0` | REST API routing, request lifecycle handling, and middleware composition |
-| **Mongoose** | `8.13.2` | Object Data Modeling (ODM) for MongoDB schemas and validations |
-| **JSON Web Token (`jsonwebtoken`)** | `9.0.2` | Stateless bearer token generation and authentication verification (24h expiry) |
-| **bcrypt** | `5.1.1` | Secure password hashing (10 salt rounds) |
-| **Joi** | `17.13.3` | Schema validation middleware for auth payloads (`signupValidation`, `loginValidation`) |
-| **Multer** | `1.4.5-lts.2` | Multipart form-data handling for image uploads to OS temporary storage |
-| **Cloudinary SDK** | `2.6.0` | Cloud media pipeline for uploading and hosting supplier receipt images |
-| **Nodemailer** | `7.0.9` | SMTP email transport client sending HTML debt reminder emails via Gmail |
-| **CORS** | `2.8.5` | Cross-Origin Resource Sharing middleware enabling frontend API requests |
-| **dotenv** | `16.4.7` | Zero-dependency environment variable loader from `.env` |
+### ⚛️ FRONTEND
 
-### Infrastructure & Containerization
-| Technology | Purpose |
-| :--- | :--- |
-| **Docker & Dockerfile** | Multi-stage Docker builds for the React frontend and Node.js backend |
-| **Nginx (Alpine)** | Reverse proxy and production static asset web server routing `/` to React and `/myapi/` to Express |
-| **Docker Compose** | Multi-container orchestration linking the webserver and backend on a private bridge network |
-| **Vercel** | Production hosting configurations (`vercel.json`) for serverless API and SPA routing |
+| Tech | Version | Role |
+|:---|:---|:---|
+| React | `18.3.1` | UI · lifecycle · state |
+| Vite | `6.2.5` | Bundler · dev server |
+| Tailwind CSS | `3.4.13` | Utility-first styling |
+| React Router DOM | `6.26.2` | SPA routing · `PrivateRoute` |
+| Context API | *native* | Global store (`StoreContext`) |
+| Axios | `1.7.7` | HTTP client |
+| Ant Design | `5.24.6` | Pre-styled components |
+| Framer Motion | `12.6.3` | Micro-animations |
+| Lucide + React Icons | `0.487` / `5.5` | Vector icons |
+| QR Scanner | `1.4.2` | Camera QR/barcode |
+| jsPDF | `3.0.1` | Vector PDF invoices |
+| React-To-Print | `3.0.1` | Native print dialog |
+| React Datepicker | `8.3.0` | Invoice calendar |
+| MongoDB Charts SDK | `3.3.1` | Embedded analytics |
+| React Toastify | `10.0.5` | Notifications |
+
+</td>
+<td valign="top" width="50%">
+
+### ⚙️ BACKEND
+
+| Tech | Version | Role |
+|:---|:---|:---|
+| Node.js | `18.x` / `20.x` | JS runtime |
+| Express.js | `5.1.0` | REST API · middleware |
+| Mongoose | `8.13.2` | ODM · schema validators |
+| jsonwebtoken | `9.0.2` | JWT · 24h expiry |
+| bcrypt | `5.1.1` | 10-round hashing |
+| Joi | `17.13.3` | Request validation |
+| Multer | `1.4.5-lts.2` | Multipart uploads |
+| Cloudinary SDK | `2.6.0` | Receipt image CDN |
+| Nodemailer | `7.0.9` | SMTP email transport |
+| CORS | `2.8.5` | Cross-origin |
+| dotenv | `16.4.7` | Env loader |
+
+### 🏗️ INFRASTRUCTURE
+
+| Tech | Role |
+|:---|:---|
+| Docker + Dockerfile | Multi-stage container builds |
+| Nginx Alpine | Reverse proxy · static server |
+| Docker Compose | Multi-container bridge |
+| Vercel | Serverless + SPA hosting |
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -173,49 +428,62 @@ Small retail merchants and convenience shopkeepers (such as local kirana stores,
 
 ```mermaid
 flowchart TD
-    subgraph Client["Frontend Client (React 18 + Vite)"]
-        UI["UI Layer\nTailwind CSS + Ant Design + Framer Motion"]
-        State["State Management\nStoreContext + localStorage"]
-        Hardware["Hardware / Browser APIs\nWebcam (qr-scanner) | Window Print | wa.me"]
-        ExportEngine["Document Engine\njsPDF + react-to-print"]
+    subgraph Client["🖥️ FRONTEND · React 18 + Vite"]
+        UI["UI Layer<br/>Tailwind + Ant Design + Framer Motion"]
+        State["State<br/>StoreContext + localStorage"]
+        Hardware["Hardware APIs<br/>qr-scanner · window.print · wa.me"]
+        Export["Document Engine<br/>jsPDF + react-to-print"]
     end
 
-    subgraph Gateway["Reverse Proxy & Gateway (Optional Docker Setup)"]
-        Nginx["Nginx Web Server (:80)\nRoutes / -> React Static\nRoutes /myapi/ -> Backend"]
+    subgraph Gateway["🌐 GATEWAY · Nginx (Docker Only)"]
+        Nginx["Nginx :80<br/>/ → React Static<br/>/myapi/ → Express"]
     end
 
-    subgraph Server["Backend API (Express 5 + Node.js :3000)"]
-        Router["Express REST Routers\n/api/auth | /api/inventory | /api/bill\n/api/customer | /api/supplier | /api/profile"]
-        Middleware["Middleware Pipeline\nCORS | Joi Validator | ensureAuthenticate (JWT) | Multer"]
-        Controllers["Controllers\nInventoryController | BillController | CustomerController\nSupplierController | AuthController | ProfileController"]
+    subgraph Server["⚙️ BACKEND · Express 5 · :3000"]
+        Router["REST Routers<br/>auth · inventory · bill · customer · supplier · profile"]
+        MW["Middleware<br/>CORS · Joi · ensureAuthenticate · Multer"]
+        Controllers["Controllers<br/>Inventory · Bill · Customer · Supplier · Auth · Profile"]
     end
 
-    subgraph Data["Data & Cloud Services"]
-        MongoDB[("MongoDB Database\nCollections: users, products,\nbills, customers, suppliers")]
-        Cloudinary["Cloudinary CDN\nSupplier Invoice Images"]
-        Gmail["Google SMTP (Nodemailer)\nAutomated Debt Recovery Emails"]
-        QRServer["QRServer External API\nDynamic QR Code Image Generator"]
-        MongoCharts["MongoDB Atlas Charts\nEmbedded Analytics SDK"]
+    subgraph Data["🗄️ DATA & CLOUD"]
+        MongoDB[("MongoDB<br/>users · products · bills<br/>customers · suppliers")]
+        Cloudinary["Cloudinary<br/>receipt CDN"]
+        Gmail["Gmail SMTP<br/>debt emails"]
+        QRServer["QRServer API<br/>QR image gen"]
+        Charts["MongoDB Charts<br/>live dashboards"]
     end
 
     UI --> Hardware
-    UI --> ExportEngine
+    UI --> Export
     UI --> State
-    State <-->|HTTP / JSON + JWT Token| Gateway
-    Gateway -->|Proxy Pass| Router
-    State <-->|Direct Dev API Calls| Router
+    State <-->|"HTTP/JSON + JWT"| Gateway
+    Gateway -->|"Proxy"| Router
+    State <-->|"Direct Dev"| Router
+    Router --> MW
+    MW --> Controllers
+    Controllers <-->|"Mongoose"| MongoDB
+    Controllers -->|"Upload"| Cloudinary
+    Controllers -->|"SMTP"| Gmail
+    UI -.->|"Fetch QR"| QRServer
+    UI -.->|"Embed"| Charts
 
-    Router --> Middleware
-    Middleware --> Controllers
-    Controllers <-->|Mongoose ODM| MongoDB
-    Controllers -->|Upload File Stream| Cloudinary
-    Controllers -->|SMTP Protocol| Gmail
-    UI -.->|Embed Charts| MongoCharts
-    UI -.->|Fetch QR Code Image| QRServer
+    style Client fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#000
+    style Gateway fill:#fed7aa,stroke:#ea580c,stroke-width:2px,color:#000
+    style Server fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#000
+    style Data fill:#fce7f3,stroke:#db2777,stroke-width:2px,color:#000
 ```
 
-### Data Isolation Architecture
-ShopManager implements **multi-tenant data scoping** at the database layer. Every core document (`Product`, `Bill`, `Customer`, `Supplier`) contains an `owner` attribute populated with the authenticated merchant's email extracted from the verified JWT token (`req.user.email`). Database operations are scoped to `{ owner: req.user.email }`, ensuring merchants cannot view or manipulate other stores' records.
+### 🔒 Multi-Tenant Data Isolation
+
+Every core document (`Product` · `Bill` · `Customer` · `Supplier`) carries an `owner` field populated from the verified JWT:
+
+```javascript
+const documents = await Product.find({ owner: req.user.email });
+//                                    ▲
+//                                    └── every read/write scoped to merchant
+```
+
+**Store A can never see Store B's data** — enforced at the query layer, not the UI.
 
 ---
 
@@ -223,356 +491,355 @@ ShopManager implements **multi-tenant data scoping** at the database layer. Ever
 
 ```text
 ShopManager-Smart-Inventory-Management-App/
-├── .git/                               # Git version control metadata
-├── docker-compose.yml                  # Multi-container orchestration (Nginx + Backend)
-├── dockerfile                          # Multi-stage frontend build & Nginx server container
-├── readme.md                           # Project documentation
 │
-├── Nginx/
-│   └── default.conf                    # Nginx reverse proxy configuration (/ & /myapi/)
+├── 🐳 docker-compose.yml              Multi-container: Nginx + Backend
+├── 🐳 dockerfile                      Multi-stage React → Nginx runtime
+├── 📖 readme.md
 │
-├── backend/                            # Express.js REST API
-│   ├── .gitignore                      # Backend ignore rules
-│   ├── dockerfile                      # Two-stage Node.js container build
-│   ├── package.json                    # Backend dependencies and run scripts
-│   ├── package-lock.json               # Backend dependency lockfile
-│   ├── server.js                       # Express app bootstrap, middleware, and route mounting
-│   ├── vercel.json                     # Serverless deployment descriptor for Vercel
+├── 🌐 Nginx/
+│   └── default.conf                   / → React  ·  /myapi/ → Express
+│
+├── ⚙️ backend/                        ── Express REST API ──
+│   ├── server.js                      Bootstrap · middleware · routes
+│   ├── vercel.json                    Serverless deploy descriptor
+│   ├── dockerfile                     Two-stage Node container
 │   ├── config/
-│   │   └── cloudinary.js               # Cloudinary v2 SDK configuration and upload helper
+│   │   └── cloudinary.js              SDK config + upload helper
 │   ├── controllers/
-│   │   ├── AuthController.js           # User registration (bcrypt) and login (JWT)
-│   │   ├── BillController.js           # POS bill creation, stock decrement, and payment history
-│   │   ├── CustomerController.js       # Customer records and batch overdue email reminders
-│   │   ├── dbController.js             # Mongoose connection initialization
-│   │   ├── InventoryController.js      # CRUD operations for products and stock search
-│   │   ├── ProductController.js        # Read-only product listing for merchant
-│   │   ├── ProfileController.js        # User/store profile retrieval and update
-│   │   └── SupplierController.js       # Supplier ledger and Cloudinary image upload
+│   │   ├── AuthController.js          signup (bcrypt) · login (JWT)
+│   │   ├── BillController.js          POS bill · stock decrement · history
+│   │   ├── CustomerController.js      Customer CRUD + batch email reminders
+│   │   ├── dbController.js            Mongoose connection
+│   │   ├── InventoryController.js     Product CRUD + search
+│   │   ├── ProductController.js       Read-only product list
+│   │   ├── ProfileController.js       Store/user profile
+│   │   └── SupplierController.js      Supplier + Cloudinary upload
 │   ├── Middleware/
-│   │   ├── auth.js                     # ensureAuthenticate JWT verification middleware
-│   │   ├── AuthValidation.js           # Joi validation rules for signup and login
-│   │   └── multer.js                   # Multer storage configuration (5MB image limit)
+│   │   ├── auth.js                    ensureAuthenticate · JWT verify
+│   │   ├── AuthValidation.js          Joi rules (signup · login)
+│   │   └── multer.js                  5 MB cap · image-only
 │   ├── models/
-│   │   ├── Bill.js                     # Bill schema, line items, deposits, and payment history
-│   │   ├── Customer.js                 # Customer schema with contact details
-│   │   ├── Product.js                  # Product schema, pricing, stock, supplier, and expiry
-│   │   ├── supplier.js                 # Supplier schema, dues, and Cloudinary image URL
-│   │   └── User.js                     # User account schema with password transformation
+│   │   ├── Bill.js                    Line items · deposits · history
+│   │   ├── Customer.js                Contact info
+│   │   ├── Product.js                 Pricing · stock · supplier · expiry
+│   │   ├── supplier.js                Dues · Cloudinary URL
+│   │   └── User.js                    Password toJSON strip
 │   └── routes/
-│       ├── authRoutes.js               # POST /sign-up, POST /login
-│       ├── billRoutes.js               # POST /create, GET /getbill, PUT /update/:billId
-│       ├── customerRoutes.js           # POST /add, GET /all, POST /send-reminders
-│       ├── inventoryRoutes.js          # POST /add, GET /list, PUT /update-product/:id, DELETE /delete/:id
-│       ├── productRoutes.js            # GET /products
-│       ├── profileRoutes.js            # GET /profile, POST /manage-profile
-│       └── supplierRoutes.js           # POST /supplier-data, GET /suppliers
+│       ├── authRoutes.js              /sign-up · /login
+│       ├── billRoutes.js              /create · /getbill · /update/:id
+│       ├── customerRoutes.js          /add · /all · /send-reminders
+│       ├── inventoryRoutes.js         /add · /list · /update · /delete
+│       ├── productRoutes.js           /products
+│       ├── profileRoutes.js           /profile · /manage-profile
+│       └── supplierRoutes.js          /supplier-data · /suppliers
 │
-└── Frontend/                           # React 18 + Vite Single Page Application
-    ├── .gitignore                      # Frontend ignore rules
-    ├── eslint.config.js                # ESLint 9 configuration
-    ├── index.html                      # HTML5 root document
-    ├── package.json                    # Frontend dependencies and Vite scripts
-    ├── package-lock.json               # Frontend dependency lockfile
-    ├── postcss.config.js               # PostCSS plugins (Tailwind CSS, Autoprefixer)
-    ├── tailwind.config.js              # Tailwind theme configuration
-    ├── vercel.json                     # SPA client-side route rewrite rules for Vercel
-    ├── vite.config.js                  # Vite configuration and React plugin
-    ├── public/                         # Public static assets & screenshots
-    │   ├── addproduct.png              # Screenshot: Add product modal
-    │   ├── billgen.png                 # Screenshot: POS billing interface
-    │   ├── logo.gif                    # Animated ShopManager banner/logo
-    │   ├── productlist.png             # Screenshot: Product inventory table
-    │   ├── sales.png                   # Screenshot: Embedded analytics charts
-    │   ├── showbill.png                # Screenshot: Invoice history & calendar
-    │   └── vite.svg                    # Vite logo asset
+└── 🖥️ Frontend/                        ── React 18 + Vite SPA ──
+    ├── index.html
+    ├── vercel.json                    SPA rewrite rules
+    ├── vite.config.js
+    ├── tailwind.config.js
+    ├── postcss.config.js
+    ├── eslint.config.js
+    ├── public/
+    │   ├── addproduct.png
+    │   ├── billgen.png
+    │   ├── logo.gif
+    │   ├── productlist.png
+    │   ├── sales.png
+    │   └── showbill.png
     └── src/
-        ├── App.jsx                     # Root application routes and PrivateRoute protection
-        ├── App.css                     # Global custom styles
-        ├── index.css                   # Tailwind CSS directives
-        ├── main.jsx                    # React DOM root entry point
-        ├── utils.js                    # Toastify success/error notification utilities
+        ├── App.jsx                    Routes + PrivateRoute gate
+        ├── main.jsx                   React DOM root
+        ├── utils.js                   Toastify helpers
         ├── Context/
-        │   └── StoreContext.jsx        # Global Context Provider for auth, bills, and customers
+        │   └── StoreContext.jsx       Auth · bills · customers global store
         └── component/
-            ├── About.jsx               # System information and feature overview page
-            ├── CustomerAccount.jsx     # Customer credit ledger and email reminder triggers
-            ├── CustomerHistory.jsx     # Individual customer transaction ledger & repayment modal
-            ├── HomePage.jsx            # Landing and marketing page
-            ├── NotFoundPage.jsx        # 404 error fallback page
-            ├── Notes.jsx               # Local storage persistent merchant scratchpad
-            ├── ProductList.jsx         # Inventory catalog with stock and expiry filter tabs
-            ├── RefreshHandler.jsx      # Auth state rehydration upon page reload
-            ├── ShowBill.jsx            # Invoice archive with day/month date picker
-            ├── StockAnalysis.jsx       # Embedded live MongoDB Charts analytics dashboard
-            ├── SupplierData.jsx        # Vendor payment ledger with receipt image uploads
-            ├── billgenerator.jsx       # POS billing screen with camera QR scanner
-            ├── card.jsx                # Reusable dashboard quick-action card
-            ├── dashboard.jsx           # Main merchant dashboard overview
-            ├── footer.jsx              # Application footer
-            ├── home.jsx                # Alternative dashboard helper view
-            ├── inventorymanager.jsx    # Inventory CRUD and QR code generation/printing
-            ├── login.jsx               # Merchant login form
-            ├── navbar.jsx              # Navigation header with responsive mobile menu
-            ├── profile.jsx             # Business profile editor
-            └── signup.jsx              # New merchant registration form
+            ├── billgenerator.jsx      POS screen + camera scanner
+            ├── dashboard.jsx          Merchant dashboard
+            ├── inventorymanager.jsx   CRUD + QR generation
+            ├── ProductList.jsx        Catalog + stock/expiry filters
+            ├── CustomerAccount.jsx    Credit ledger overview
+            ├── CustomerHistory.jsx    Per-customer ledger + repay modal
+            ├── SupplierData.jsx       Vendor ledger + receipt upload
+            ├── StockAnalysis.jsx      Embedded MongoDB Charts
+            ├── ShowBill.jsx           Invoice archive + calendar
+            ├── Notes.jsx              localStorage scratchpad
+            ├── login.jsx / signup.jsx
+            ├── navbar.jsx / footer.jsx
+            └── profile.jsx
 ```
 
 ---
 
 ## 📋 Prerequisites
 
-To run this project locally, ensure you have the following installed on your machine:
+```
+  ┌─ REQUIRED ──────────────────────────────────────────────────────────┐
+  │                                                                     │
+  │  [✓] Node.js     v18.x or v20.x   (LTS · tested to v24)             │
+  │  [✓] npm         v9.x+                                              │
+  │  [✓] MongoDB     local :27017 or Atlas URI                          │
+  │  [✓] Browser     Chrome · Firefox · Edge · Safari                   │
+  │                  📷 camera permission required for QR scan          │
+  │                                                                     │
+  └─────────────────────────────────────────────────────────────────────┘
 
-- **Node.js**: `v18.x` or `v20.x` (LTS recommended; tested up to Node 24).
-- **npm**: `v9.x` or newer (included with Node.js).
-- **MongoDB**: A running local MongoDB instance (`mongodb://localhost:27017/shopmanager`) or a cloud-hosted [MongoDB Atlas](https://www.mongodb.com/atlas) cluster connection string.
-- **Modern Web Browser**: Chrome, Firefox, Edge, or Safari with camera permissions enabled (required for live QR scanning).
-
-### Optional Cloud Service Accounts
-- **Google Account (Gmail)**: An active Gmail address with an **App Password** generated (required only for automated customer debt reminder emails).
-- **Cloudinary Account**: Free tier account for `CLOUDINARY_NAME`, `CLOUDINARY_API_KEY`, and `CLOUDINARY_API_SECRET` (required only for uploading supplier receipt images).
-- **Docker & Docker Compose**: Required only if running via containerized deployment.
+  ┌─ OPTIONAL ──────────────────────────────────────────────────────────┐
+  │                                                                     │
+  │  [○] Gmail account + App Password   → debt reminder emails          │
+  │  [○] Cloudinary account             → supplier receipt CDN          │
+  │  [○] Docker + Compose               → containerized deployment      │
+  │                                                                     │
+  └─────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
 ## ⚙️ Installation & Setup
 
-Follow these steps sequentially to set up and run the application from scratch.
-
-### 1. Clone the Repository
+### `» 01` Clone
 
 ```bash
 git clone https://github.com/yash-shende99/ShopManager-Smart-Inventory-Management-App.git
 cd ShopManager-Smart-Inventory-Management-App
 ```
 
----
+### `» 02` Configure Backend
 
-### 2. Configure the Backend
+```bash
+cd backend
+npm install
+```
 
-1. Navigate to the `backend` directory:
-   ```bash
-   cd backend
-   ```
+Create `backend/.env`:
 
-2. Install backend dependencies:
-   ```bash
-   npm install
-   ```
+```env
+PORT=3000
+MONGO_URL=mongodb+srv://<user>:<pass>@cluster0.mongodb.net/shopmanager?retryWrites=true&w=majority
+JWT_SECRET=your_super_secret_jwt_key_min_32_characters
 
-3. Create the environment configuration file:
-   Create a `.env` file inside the `backend` directory:
-   ```bash
-   # On Windows (PowerShell)
-   New-Item -ItemType File -Name .env
-   # On Linux/macOS
-   touch .env
-   ```
+# Optional — email reminders
+EMAIL_USER=your_store_email@gmail.com
+EMAIL_PASS=your_16_character_gmail_app_password
 
-4. Populate `backend/.env` with your verified credentials:
-   ```env
-   PORT=3000
-   MONGO_URL=mongodb+srv://<username>:<password>@cluster0.mongodb.net/shopmanager?retryWrites=true&w=majority
-   JWT_SECRET=your_super_secret_jwt_key_min_32_characters
+# Optional — Cloudinary receipt uploads
+CLOUDINARY_NAME=your_cloudinary_cloud_name
+CLOUDINARY_API_KEY=your_cloudinary_api_key
+CLOUDINARY_API_SECRET=your_cloudinary_api_secret
+```
 
-   # Optional: Required for sending debt reminder emails
-   EMAIL_USER=your_store_email@gmail.com
-   EMAIL_PASS=your_16_character_gmail_app_password
+> Windows: `New-Item -ItemType File -Name .env` &nbsp;·&nbsp; Linux/macOS: `touch .env`
 
-   # Optional: Required for uploading supplier receipt photos
-   CLOUDINARY_NAME=your_cloudinary_cloud_name
-   CLOUDINARY_API_KEY=your_cloudinary_api_key
-   CLOUDINARY_API_SECRET=your_cloudinary_api_secret
-   ```
+### `» 03` Configure Frontend
 
----
+```bash
+cd ../Frontend
+npm install
+```
 
-### 3. Configure the Frontend
-
-1. Open a new terminal window and navigate to the `Frontend` directory:
-   ```bash
-   cd ../Frontend
-   ```
-
-2. Install frontend dependencies:
-   ```bash
-   npm install
-   ```
-
-> [!NOTE]
-> In local development, the frontend `StoreContext.jsx` communicates with the backend API at `http://localhost:3000` by default. Ensure your backend server is running on port `3000`.
+> 💡 **Dev default:** `StoreContext.jsx` points to `http://localhost:3000`. Ensure backend runs on port `3000`.
 
 ---
 
 ## 🔐 Environment Variables
 
-The backend application reads the following variables from `backend/.env`:
+**`backend/.env`**
 
-| Variable Name | Required? | Purpose | Safe Example / Default | Description |
-| :--- | :---: | :--- | :--- | :--- |
-| `PORT` | Optional | Port on which the Express server listens | `3000` | Defaults to `3000` if not specified. |
-| `MONGO_URL` | **Required** | MongoDB database connection URI | `mongodb://localhost:27017/shopmanager` | Standard MongoDB connection string with credentials. |
-| `JWT_SECRET` | **Required** | Cryptographic key for signing auth tokens | `f7b8c9d0e1f2a3b4c5...` | Used by `jsonwebtoken` to sign and verify user sessions. |
-| `EMAIL_USER` | Optional | Gmail address for dispatching reminder emails | `merchant.store@gmail.com` | Used by `nodemailer` transport. |
-| `EMAIL_PASS` | Optional | Gmail 16-character App Password | `abcd efgh ijkl mnop` | Google App Password (not standard account password). |
-| `CLOUDINARY_NAME` | Optional | Cloudinary Cloud Name identifier | `shopmanager-cloud` | Required by Cloudinary SDK for image uploads. |
-| `CLOUDINARY_API_KEY` | Optional | Cloudinary API Key | `123456789012345` | Credential for authenticated image uploads. |
-| `CLOUDINARY_API_SECRET` | Optional | Cloudinary API Secret | `a1b2c3d4e5f6g7h8...` | Secret key for Cloudinary API signatures. |
+| Variable | Req | Default | Purpose |
+|:---|:--:|:---|:---|
+| `PORT` | ○ | `3000` | Express listen port |
+| `MONGO_URL` | ✅ | — | MongoDB connection URI |
+| `JWT_SECRET` | ✅ | — | JWT signing key |
+| `EMAIL_USER` | ○ | — | Gmail address for Nodemailer |
+| `EMAIL_PASS` | ○ | — | Gmail 16-char App Password |
+| `CLOUDINARY_NAME` | ○ | — | Cloudinary cloud name |
+| `CLOUDINARY_API_KEY` | ○ | — | Cloudinary API key |
+| `CLOUDINARY_API_SECRET` | ○ | — | Cloudinary API secret |
 
 > [!CAUTION]
-> Never commit `backend/.env` or any real API keys to version control. Keep `.env` listed inside `backend/.gitignore`.
+> 🚨 **Never commit `backend/.env`.** Add it to `.gitignore`. Rotate any leaked keys immediately.
 
 ---
 
 ## 🏃 Running the Application
 
-### Local Development
+### `▸ Local Development` — 2 terminals
 
-For standard development, run the backend and frontend in separate terminals:
+<table>
+<tr>
+<td width="50%">
 
-#### Terminal 1: Backend Server
+**Terminal 1 · Backend**
+
 ```bash
 cd backend
-
-# Option A: Start with Nodemon (auto-reload on code change)
-npm run server
-
-# Option B: Start standard Node process
-npm start
+npm run server     # nodemon
+# or
+npm start          # plain node
 ```
-*Output: `server listening on port 3000` and `mongodb connected successfully`.*
 
-#### Terminal 2: Frontend Client
+Expected:
+```
+server listening on port 3000
+mongodb connected successfully
+```
+
+</td>
+<td width="50%">
+
+**Terminal 2 · Frontend**
+
 ```bash
 cd Frontend
 npm run dev
 ```
-*Output: `VITE v6.2.5 ready in ... ms -> Local: http://localhost:5173/`.*
 
-Access the application in your browser at: **`http://localhost:5173`**
+Expected:
+```
+VITE v6.2.5 ready
+→ http://localhost:5173/
+```
 
----
+</td>
+</tr>
+</table>
 
-### Running with Docker Compose
+**🌐 Open:** http://localhost:5173
 
-ShopManager includes a root `docker-compose.yml` that provisions the full stack using an Nginx reverse proxy:
+### `▸ Docker Compose`
 
 ```bash
-# From the repository root
 docker compose up --build
 ```
 
-- **Frontend & Proxy**: Access the application on **`http://localhost:80`** (or `http://localhost`).
-- **Nginx Routing**: In this setup, Nginx serves the compiled React production bundle from `/usr/share/nginx/html` and forwards `/myapi/` requests to the internal backend container at `backend:3000`.
+| Service | URL |
+|:---|:---|
+| Frontend + Proxy | http://localhost:80 |
+| Nginx routes `/` | → React static bundle |
+| Nginx routes `/myapi/` | → `backend:3000` (internal) |
 
-To stop the containers:
-```bash
-docker compose down
-```
+Stop: `docker compose down`
 
 ---
 
 ## 📖 User Walkthrough
 
-Follow this typical merchant workflow to explore the application:
-
-```text
-  1. Register & Login ──> 2. Populate Inventory ──> 3. Generate QR Tags
-            │                                             │
-            ▼                                             ▼
-  6. Review Analytics <── 5. Manage Credit/Khata <── 4. POS Camera Checkout
+```
+  ┌───┐   ┌───┐   ┌───┐   ┌───┐   ┌───┐   ┌───┐
+  │ 1 │ → │ 2 │ → │ 3 │ → │ 4 │ → │ 5 │ → │ 6 │
+  └───┘   └───┘   └───┘   └───┘   └───┘   └───┘
+   Sign   Populate Print  POS    Manage  Review
+   up     Catalog  QR     Scan   Khata   Analytics
 ```
 
-1. **Merchant Onboarding**:
-   - Navigate to `/signup` to register a new store account (`Name`, `Email`, `Password`, `Phone Number`).
-   - Log in at `/login`. The system issues a 24-hour JWT token stored securely in `localStorage`.
-2. **Catalog Creation**:
-   - Open **Inventory Manager** (`/inventorymanager`).
-   - Click **Add Product** to specify name, category, cost price, selling price, current stock, reorder threshold, supplier, and expiration date.
-3. **Print QR Code Labels**:
-   - In the inventory list, click the **QR Code** icon next to any product.
-   - The system displays a generated QR code embedding the product's unique database ID.
-   - Click **Print QR Code** to print shelf or packaging labels.
-4. **Point of Sale (POS) Billing**:
-   - Open **Bill Generator** (`/billgenerator`).
-   - Click **Start Scanner** to activate the webcam, and hold up a product QR code. The item is automatically resolved and added to the cart.
-   - Alternatively, search and select products manually from the dropdown.
-   - Enter or select a customer.
-   - Enter a customer deposit amount (or leave blank if paying in full).
-   - Click **Create Bill**.
-   - Download the generated vector invoice via **Save as PDF** or click **Share via WhatsApp** to deliver the itemized receipt directly to the customer's phone.
-5. **Managing Customer Credit ("Borrow Account")**:
-   - Open **Customer Accounts** (`/customeraccount`).
-   - View each customer's total outstanding credit.
-   - Click **View History** to review an itemized breakdown of past unpaid bills.
-   - When the customer makes a repayment, click **Update Deposit** to log the payment installment.
-   - To send payment reminders, specify an overdue threshold (e.g., `5` days) and click **Send Reminders** to dispatch automated HTML emails to all indebted customers.
-6. **Supplier Ledger & Receipts**:
-   - Open **Supplier Data** (`/supplierData`).
-   - Log vendor deliveries, total payables, deposits paid, and attach a photo/scan of the vendor's receipt (uploaded directly to Cloudinary).
-7. **Business Analytics**:
-   - Visit **Stock Analysis** (`/stockanalysis`) to monitor live turnover graphs, expiring stock items, and sales volume charts.
+**`[1]` Merchant Onboarding**
+Register at `/signup` → login at `/login` → 24h JWT stored in `localStorage`.
+
+**`[2]` Catalog Creation**
+Open **Inventory Manager** (`/inventorymanager`) → **Add Product** → name · category · cost · selling · qty · reorder · supplier · expiry.
+
+**`[3]` Print QR Labels**
+Click the **QR icon** → generated via `api.qrserver.com` → **Print QR Code** for shelf/packaging.
+
+**`[4]` POS Billing**
+Open **Bill Generator** (`/billgenerator`) → **Start Scanner** → hold product QR to camera → auto-added. Or search dropdown. Enter customer + deposit (or blank for full payment) → **Create Bill**.
+→ **Save as PDF** or **Share via WhatsApp** for instant digital receipt.
+
+**`[5]` Khata Management**
+Open **Customer Accounts** (`/customeraccount`) → view outstanding balances → **View History** for itemized unpaid bills → **Update Deposit** on repayment → **Send Reminders** with day threshold (default 5d) fires batch HTML emails.
+
+**`[6]` Supplier Ledger**
+Open **Supplier Data** (`/supplierData`) → log deliveries · payables · deposits · attach photo scan → uploaded to Cloudinary.
+
+**`[7]` Analytics**
+Open **Stock Analysis** (`/stockanalysis`) → 8 live MongoDB Charts panels.
 
 ---
 
 ## 📡 API Reference
 
-All protected endpoints require an `Authorization` header containing the valid JWT string received during login:
-`Authorization: <jwt_token>`
+> **Auth header:** `Authorization: <jwt_token>`
 
-### Authentication Routes (`/api`)
+<details>
+<summary><b>🔑 Auth</b> — <code>/api</code></summary>
 
-| Method | Endpoint | Auth? | Payload | Response Description |
-| :--- | :--- | :---: | :--- | :--- |
-| `POST` | `/api/sign-up` | No | `{ name, email, password, phoneNumber }` | Registers user (bcrypt password hash); returns `200 OK` |
-| `POST` | `/api/login` | No | `{ email, password }` | Returns `200 OK` with `{ jwttoken, email, name }` |
+<br>
 
-### Profile Routes (`/api`)
+| Method | Endpoint | Auth | Payload | Response |
+|:---:|:---|:--:|:---|:---|
+| `POST` | `/api/sign-up` | ❌ | `{ name, email, password, phoneNumber }` | `200 OK` |
+| `POST` | `/api/login` | ❌ | `{ email, password }` | `{ jwttoken, email, name }` |
 
-| Method | Endpoint | Auth? | Payload | Response Description |
-| :--- | :--- | :---: | :--- | :--- |
-| `GET` | `/api/profile` | Yes | None | Returns user profile details `{ user: { name, email, phoneNumber } }` |
-| `POST` | `/api/manage-profile` | Yes | `{ phoneNumber, businessName }` | Updates store/user profile in MongoDB |
+</details>
 
-### Inventory Routes (`/api/inventory` & `/api`)
+<details>
+<summary><b>👤 Profile</b> — <code>/api</code></summary>
 
-| Method | Endpoint | Auth? | Payload / Query | Response Description |
-| :--- | :--- | :---: | :--- | :--- |
-| `POST` | `/api/inventory/add` | Yes | Product JSON object | Creates product with `owner` set to user email |
-| `GET` | `/api/inventory/list` | Yes | `?search=<term>` (optional) | Returns products filtered by owner and optional regex search |
-| `PUT` | `/api/inventory/update-product/:id` | Yes | `{ quantity, actualPrice, sellingPrice }` | Updates stock quantity and prices for product ID |
-| `DELETE` | `/api/inventory/delete/:id` | Yes | None | Deletes product record owned by authenticated user |
-| `GET` | `/api/products` | Yes | None | Returns all products belonging to the merchant |
+<br>
 
-### Billing & POS Routes (`/api/bill`)
+| Method | Endpoint | Auth | Payload | Response |
+|:---:|:---|:--:|:---|:---|
+| `GET` | `/api/profile` | ✅ | — | `{ user: { name, email, phoneNumber } }` |
+| `POST` | `/api/manage-profile` | ✅ | `{ phoneNumber, businessName }` | `200 OK` |
 
-| Method | Endpoint | Auth? | Payload | Response Description |
-| :--- | :--- | :---: | :--- | :--- |
-| `POST` | `/api/bill/create` | Yes | `{ customerName, phoneNumber, deposit, customerId, items }` | Validates stock, decrements inventory, generates `BILL-<timestamp>`, creates bill document |
-| `GET` | `/api/bill/getbill` | Yes | None | Retrieves all bills belonging to the authenticated merchant |
-| `PUT` | `/api/bill/update/:billId` | Yes | `{ history: depositAmount }` | Adds repayment deposit installment and updates bill balance |
+</details>
 
-### Customer & Credit Ledger Routes (`/api/customer`)
+<details>
+<summary><b>📦 Inventory</b> — <code>/api/inventory</code> · <code>/api</code></summary>
 
-| Method | Endpoint | Auth? | Payload | Response Description |
-| :--- | :--- | :---: | :--- | :--- |
-| `POST` | `/api/customer/add` | Yes | `{ customerName, phoneNumber, email }` | Creates new customer record scoped to merchant |
-| `GET` | `/api/customer/all` | Yes | None | Returns all customer records for merchant |
-| `POST` | `/api/customer/send-reminders` | Yes | `{ days: number }` | Finds customers with unpaid balances older than `days` and sends Nodemailer HTML emails |
+<br>
 
-### Supplier Routes (`/api/supplier`)
+| Method | Endpoint | Auth | Payload / Query |
+|:---:|:---|:--:|:---|
+| `POST` | `/api/inventory/add` | ✅ | Product JSON |
+| `GET` | `/api/inventory/list?search=` | ✅ | Optional regex term |
+| `PUT` | `/api/inventory/update-product/:id` | ✅ | `{ quantity, actualPrice, sellingPrice }` |
+| `DELETE` | `/api/inventory/delete/:id` | ✅ | — |
+| `GET` | `/api/products` | ✅ | — |
 
-| Method | Endpoint | Auth? | Payload | Response Description |
-| :--- | :--- | :---: | :--- | :--- |
-| `POST` | `/api/supplier/supplier-data` | Yes | Multipart form (`supplierName`, `totalPayment`, `depositAmount`, `date`, `image` file) | Uploads invoice image to Cloudinary and saves supplier record |
-| `GET` | `/api/supplier/suppliers` | Yes | None | Returns all supplier records and Cloudinary image URLs |
+</details>
+
+<details>
+<summary><b>🧾 Billing & POS</b> — <code>/api/bill</code></summary>
+
+<br>
+
+| Method | Endpoint | Auth | Payload |
+|:---:|:---|:--:|:---|
+| `POST` | `/api/bill/create` | ✅ | `{ customerName, phoneNumber, deposit, customerId, items }` |
+| `GET` | `/api/bill/getbill` | ✅ | — |
+| `PUT` | `/api/bill/update/:billId` | ✅ | `{ history: depositAmount }` |
+
+</details>
+
+<details>
+<summary><b>👥 Customer & Ledger</b> — <code>/api/customer</code></summary>
+
+<br>
+
+| Method | Endpoint | Auth | Payload |
+|:---:|:---|:--:|:---|
+| `POST` | `/api/customer/add` | ✅ | `{ customerName, phoneNumber, email }` |
+| `GET` | `/api/customer/all` | ✅ | — |
+| `POST` | `/api/customer/send-reminders` | ✅ | `{ days: number }` |
+
+</details>
+
+<details>
+<summary><b>🚚 Supplier</b> — <code>/api/supplier</code></summary>
+
+<br>
+
+| Method | Endpoint | Auth | Payload |
+|:---:|:---|:--:|:---|
+| `POST` | `/api/supplier/supplier-data` | ✅ | Multipart · `supplierName · totalPayment · depositAmount · date · image` |
+| `GET` | `/api/supplier/suppliers` | ✅ | — |
+
+</details>
 
 ---
 
 ## 🗄️ Database & Data Models
-
-ShopManager uses MongoDB via Mongoose. The database schema relationships are mapped below:
 
 ```mermaid
 erDiagram
@@ -598,12 +865,12 @@ erDiagram
         string owner FK "User email"
         string name
         string category
-        number actualPrice "Cost price"
+        number actualPrice
         number sellingPrice
-        number quantity "Stock count"
-        number reorderLevel "Threshold"
+        number quantity
+        number reorderLevel
         string supplier
-        number discount "Percentage"
+        number discount
         date expirationDate
         date dateAdded
         date dateUpdated
@@ -623,15 +890,15 @@ erDiagram
         string _id PK
         string owner FK "User email"
         string customerName
-        string customerId FK "Optional"
+        string customerId FK
         string billNumber UK
         string phoneNumber
         number grandTotal
         number netQuantity
-        number deposit "Paid amount"
+        number deposit
         date date
-        array items "productName, qty, price, total"
-        array history "depositHistory, date, paymentMethod"
+        array items
+        array history
     }
 
     SUPPLIER {
@@ -651,158 +918,271 @@ erDiagram
 
 ## 🧪 Testing & Code Quality
 
-### Code Quality & Linting
-- **Frontend Linter**: Configured with ESLint 9 (`@eslint/js`, `eslint-plugin-react`, `eslint-plugin-react-hooks`, `eslint-plugin-react-refresh`).
-  ```bash
-  cd Frontend
-  npm run lint
-  ```
-- **Code Formatting & Build Verification**:
-  ```bash
-  cd Frontend
-  npm run build
-  ```
-  *Executes `vite build` and compiles production assets into `Frontend/dist/` to verify JSX, imports, and CSS compilation.*
+### `» Frontend Lint`
 
-### Test Suite Status
-- **Backend Unit Tests**: Currently, the backend `package.json` specifies `"test": "echo \"Error: no test specified\" && exit 1"`. Automated integration tests (e.g. with Mocha/Jest/Supertest) are not yet implemented and are targeted for upcoming milestones.
-- **Manual Verification**: All listed API routes, POS calculations, WhatsApp URL generation, and JWT validation flows have been verified against active source code.
+```bash
+cd Frontend
+npm run lint
+```
+
+ESLint 9 + `eslint-plugin-react` · `react-hooks` · `react-refresh`.
+
+### `» Build Verification`
+
+```bash
+cd Frontend
+npm run build
+```
+
+Runs `vite build` → outputs to `Frontend/dist/`.
+
+### `» Test Status`
+
+| Layer | Status |
+|:---|:---|
+| Frontend lint | ✅ Configured |
+| Frontend build | ✅ Working |
+| Backend tests | ⏳ Not yet implemented |
+| Manual E2E | ✅ All API flows verified |
+
+**Recommended stack for contributors:** Jest · Supertest (backend) · Vitest + RTL (frontend).
 
 ---
 
 ## 🚀 Deployment Configuration
 
-### 1. Vercel (Production Cloud Hosting)
-The repository includes dedicated `vercel.json` descriptors for both frontend and backend:
-- **Frontend (`Frontend/vercel.json`)**: Configured with a single-page rewrite (`"source": "/(.*)", "destination": "/"`) allowing React Router DOM to manage client-side routes without 404 errors on browser refresh.
-- **Backend (`backend/vercel.json`)**: Configured with `@vercel/node` to deploy `server.js` as a serverless API function routing all `/.*` requests to Express.
+<table>
+<tr>
+<td valign="top" width="50%">
 
-### 2. Docker & Nginx Deployment
-- **`dockerfile` (Root)**: A multi-stage build that:
-  1. Installs frontend dependencies using `node:20-alpine` and compiles static assets via `npm run build`.
-  2. Copies compiled HTML/CSS/JS into an `nginx:alpine` image.
-  3. Applies `Nginx/default.conf` to serve static assets and proxy API requests.
-- **`backend/dockerfile`**: A two-stage build that installs dependencies using `node:18` and runs the Express API in `node:18-slim`.
-- **`docker-compose.yml`**: Bridges the two services on a single private Docker network (`app-network`).
+### `▸ Vercel`
+
+- **Frontend** (`Frontend/vercel.json`) — SPA rewrite: `"source": "/(.*)", "destination": "/"` → React Router handles routes on refresh
+- **Backend** (`backend/vercel.json`) — `@vercel/node` serverless function routes to Express
+
+</td>
+<td valign="top" width="50%">
+
+### `▸ Docker + Nginx`
+
+- **Root `dockerfile`** — Multi-stage: `node:20-alpine` builds → `nginx:alpine` serves
+- **`backend/dockerfile`** — Two-stage: `node:18` build → `node:18-slim` runtime
+- **`docker-compose.yml`** — `app-network` bridge · Nginx proxy to backend
+
+</td>
+</tr>
+</table>
 
 ---
 
 ## 🔒 Security & Privacy Considerations
 
-- **Password Hashing**: Passwords are never stored in plaintext. They are salted and hashed using `bcrypt` (10 rounds) before persistence.
-- **Password Exposure Prevention**: The `User` Mongoose schema includes a custom `toJSON` transform that strips the `password` field from document serialization.
-- **Input Sanitization & Validation**: `AuthValidation.js` enforces strict server-side rules via `Joi` (requiring valid email formatting, password length, and 10-digit phone constraints) before requests touch database controllers.
-- **JWT Authorization**: Sensitive endpoints are protected by `ensureAuthenticate`. Requests missing an `Authorization` header receive a `403 Forbidden` response.
-- **Multi-Tenant Scoping**: All database updates and queries enforce strict `{ owner: req.user.email }` checks, preventing horizontal privilege escalation between store owners.
-- **File Upload Safeguards**: Multer disk storage strictly restricts file types to `image/jpeg` and `image/png` with a maximum payload limit of 5MB, preventing denial-of-service via large binary uploads. Local temp files are deleted immediately after uploading to Cloudinary.
+| 🛡️ Layer | Implementation |
+|:---|:---|
+| **Password storage** | `bcrypt` · 10 salt rounds · never plaintext |
+| **Password exposure** | `User.toJSON` strips `password` before serialization |
+| **Input validation** | Joi schemas (`AuthValidation.js`) — email · password length · 10-digit phone |
+| **JWT auth** | `ensureAuthenticate` middleware · missing header → `403` |
+| **Multi-tenant isolation** | `{ owner: req.user.email }` on every read/write |
+| **Upload safeguards** | Multer · `image/jpeg` + `image/png` only · 5 MB cap · immediate temp cleanup |
 
 ---
 
 ## ❓ Troubleshooting & FAQ
 
-### 1. MongoDB Connection Error (`MongooseServerSelectionError` / `ECONNREFUSED`)
-- **Symptom**: Server crashes on startup with `Error Occurred in mongodb Connection`.
-- **Cause**: Invalid `MONGO_URL` in `backend/.env`, or IP address not whitelisted in MongoDB Atlas.
-- **Solution**: Open [MongoDB Atlas](https://cloud.mongodb.com/) $\rightarrow$ **Network Access** $\rightarrow$ Click **Add IP Address** $\rightarrow$ Select **Allow Access From Anywhere** (`0.0.0.0/0`) for development. Verify that database username and password in `MONGO_URL` do not contain unencoded special characters.
+<details>
+<summary><b>① <code>MongooseServerSelectionError</code> / <code>ECONNREFUSED</code></b></summary>
 
-### 2. Nodemailer Fails to Send Debt Reminder Emails (`Invalid login: 535-5.7.8`)
-- **Symptom**: Calling `POST /api/customer/send-reminders` returns `Internal Server Error`.
-- **Cause**: Using your regular Google account password instead of a dedicated App Password.
-- **Solution**: Go to your Google Account $\rightarrow$ **Security** $\rightarrow$ **2-Step Verification** $\rightarrow$ **App passwords**. Generate a 16-character password for "Mail" and set it as `EMAIL_PASS` in `backend/.env`.
+<br>
 
-### 3. QR Camera Scanner Displays Black Screen or "Camera Access Denied"
-- **Symptom**: Clicking "Start Scanner" in Bill Generator does not display the video feed.
-- **Cause**: Browser camera permissions denied or testing over an insecure non-localhost HTTP connection.
-- **Solution**: Modern browsers block camera access on non-secure origins. Ensure you access the app via `http://localhost:5173` or over HTTPS. Check browser site permissions and permit camera access.
+**Symptom:** Crash on startup · `Error Occurred in mongodb Connection`
 
-### 4. Supplier Receipt Upload Fails (`Failed to upload image`)
-- **Symptom**: Submitting the Supplier form returns a `500 Failed to upload image` error.
-- **Cause**: Missing or incorrect Cloudinary credentials in `backend/.env`.
-- **Solution**: Confirm that `CLOUDINARY_NAME`, `CLOUDINARY_API_KEY`, and `CLOUDINARY_API_SECRET` are properly defined without quotation marks in `backend/.env`.
+**Cause:** Bad `MONGO_URL` · IP not whitelisted in Atlas
 
-### 5. Docker Backend Healthcheck Failure
-- **Symptom**: `docker-compose up` reports `backend` container unhealthy.
-- **Cause**: `docker-compose.yml` runs a healthcheck curling `http://localhost:3000/health`, but `server.js` mounts routes under `/api`.
-- **Solution**: Either add a simple `app.get('/health', (req, res) => res.status(200).send('OK'))` in `backend/server.js`, or update the healthcheck in `docker-compose.yml` to check `/api/products` with an auth header or disable the healthcheck test.
+**Fix:**
+1. Atlas → **Network Access** → **Add IP** → `0.0.0.0/0` (dev only)
+2. URL-encode special chars in DB password (`@` → `%40`, etc.)
+
+</details>
+
+<details>
+<summary><b>② Nodemailer fails with <code>535-5.7.8 Invalid login</code></b></summary>
+
+<br>
+
+**Cause:** Using regular Google account password instead of App Password.
+
+**Fix:** Google Account → **Security** → **2-Step Verification** → **App passwords** → generate 16-char password → set as `EMAIL_PASS`.
+
+</details>
+
+<details>
+<summary><b>③ QR camera shows black screen / "Camera Access Denied"</b></summary>
+
+<br>
+
+**Cause:** Browser blocks camera on insecure origins.
+
+**Fix:** Use `http://localhost:5173` or HTTPS. Check browser site permissions.
+
+</details>
+
+<details>
+<summary><b>④ Supplier receipt upload fails (<code>500 Failed to upload image</code>)</b></summary>
+
+<br>
+
+**Cause:** Missing/wrong Cloudinary credentials.
+
+**Fix:** Verify `CLOUDINARY_NAME` · `CLOUDINARY_API_KEY` · `CLOUDINARY_API_SECRET` in `backend/.env` — no quotes.
+
+</details>
+
+<details>
+<summary><b>⑤ Docker backend healthcheck unhealthy</b></summary>
+
+<br>
+
+**Cause:** `docker-compose.yml` curls `/health` but routes mount under `/api`.
+
+**Fix:** Add `app.get('/health', (req, res) => res.status(200).send('OK'))` in `server.js` — or point healthcheck to `/api/products` with auth.
+
+</details>
 
 ---
 
 ## 🚧 Known Limitations & Current Status
 
-To ensure complete technical transparency, the following architectural details reflect the current codebase status:
-
-1. **Twilio Dependency**: `twilio` is declared in both `backend/package.json` and `Frontend/package.json`, and `User.js` has a `lastSMSNotificationDate` field. However, automated SMS sending via Twilio API is not currently active in controller logic. The application currently delivers reminders via **Nodemailer (email)** and **WhatsApp Click-to-Chat protocol (`wa.me`)**.
-2. **Dashboard Overview Metrics**: The top summary cards on the main dashboard (`/dashboard`) currently render demonstrative statistics, while actual live data analysis is rendered via the dedicated **Stock Analysis** (`/stockanalysis`) interface using the MongoDB Charts Embed SDK.
-3. **Frontend API URL Binding**: In `Frontend/src/Context/StoreContext.jsx`, `backend_url` defaults to `http://localhost:3000`. In a production build outside Docker, this should be modified or migrated to a `VITE_API_URL` environment variable.
-4. **Nginx Path Mapping**: `Nginx/default.conf` proxies the `/myapi/` path to the backend, whereas default client requests in dev point directly to `/api`.
+```
+  ┌─ TRANSPARENCY.LOG ──────────────────────────────────────────────────┐
+  │                                                                     │
+  │  [01] Twilio dependency declared, SMS sending NOT active            │
+  │       → Reminders delivered via Nodemailer + wa.me only             │
+  │                                                                     │
+  │  [02] Dashboard overview cards show demo stats                      │
+  │       → Real analytics live in /stockanalysis (MongoDB Charts)      │
+  │                                                                     │
+  │  [03] StoreContext.jsx hardcodes http://localhost:3000              │
+  │       → Should migrate to import.meta.env.VITE_API_URL              │
+  │                                                                     │
+  │  [04] Nginx proxies /myapi/ but dev clients hit /api directly       │
+  │       → Path mismatch noted for production alignment                │
+  │                                                                     │
+  └─────────────────────────────────────────────────────────────────────┘
+```
 
 ---
 
 ## 🗺️ Roadmap
 
-- [x] Multi-tenant merchant authentication with JWT and bcrypt
-- [x] Product inventory CRUD with reorder level and expiration date tracking
-- [x] Dynamic QR code label generation and printing (QRServer API)
-- [x] Real-time camera QR barcode scanner POS billing (`qr-scanner`)
-- [x] Vector invoice PDF generation (`jspdf`) and direct print support (`react-to-print`)
-- [x] Digital receipt delivery and customer payment reminders via WhatsApp (`wa.me`)
-- [x] Customer borrow/credit ledger with repayment installment tracking
-- [x] Automated batch email payment reminders for overdue balances (`nodemailer`)
-- [x] Supplier invoice photo storage via Cloudinary
-- [x] Live embedded MongoDB Charts visual analytics
-- [ ] Migrate `StoreContext.jsx` backend URL to standard `import.meta.env.VITE_API_URL`
-- [ ] Add explicit `/health` endpoint to Express `server.js` for container healthchecks
-- [ ] Implement automated backend unit and integration test suite (Jest / Supertest)
-- [ ] Integrate automated SMS gateway notifications via Twilio API
-- [ ] Add CSV export for inventory and sales accounting
+```
+  ✅ SHIPPED                                              ⏳ NEXT
+  ─────────                                               ───────
+  ✅ Multi-tenant JWT + bcrypt auth                       ⏳ VITE_API_URL env migration
+  ✅ Product CRUD · reorder · expiry                      ⏳ /health endpoint for Docker
+  ✅ QR generation + printing                             ⏳ Jest · Supertest · Vitest suites
+  ✅ Live camera QR POS billing                           ⏳ Twilio SMS gateway
+  ✅ jsPDF · react-to-print invoices                      ⏳ CSV export (inventory · sales)
+  ✅ WhatsApp + email reminders
+  ✅ Customer khata ledger · installment log
+  ✅ Supplier Cloudinary receipts
+  ✅ MongoDB Charts analytics
+```
 
 ---
 
 ## 🤝 Contributing
 
-Contributions are welcomed. To maintain code quality:
+```
+  ┌─────────────────────────────────────────────────────────────────────┐
+  │  FORK  →  BRANCH  →  CODE  →  LINT  →  BUILD  →  PR                 │
+  └─────────────────────────────────────────────────────────────────────┘
+```
 
-1. **Fork the Repository**:
-   Click the **Fork** button at the top right of the GitHub page.
-2. **Clone Your Fork**:
-   ```bash
-   git clone https://github.com/<your-username>/ShopManager-Smart-Inventory-Management-App.git
-   cd ShopManager-Smart-Inventory-Management-App
-   ```
-3. **Create a Feature Branch**:
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
-4. **Implement Changes & Validate**:
-   - Write clean, documented code adhering to existing module structure.
-   - Run the frontend linter:
-     ```bash
-     cd Frontend && npm run lint
-     ```
-   - Verify frontend build:
-     ```bash
-     npm run build
-     ```
-5. **Commit Your Changes**:
-   ```bash
-   git commit -m "feat: describe your change cleanly"
-   ```
-6. **Push to Your Branch & Submit a Pull Request**:
-   ```bash
-   git push origin feature/your-feature-name
-   ```
-   Open a Pull Request against the `main` branch with a clear description of changes.
+```bash
+# 1. Fork on GitHub
+
+# 2. Clone your fork
+git clone https://github.com/<your-username>/ShopManager-Smart-Inventory-Management-App.git
+cd ShopManager-Smart-Inventory-Management-App
+
+# 3. Feature branch
+git checkout -b feature/your-feature-name
+
+# 4. Implement + verify
+cd Frontend && npm run lint && npm run build
+
+# 5. Commit (conventional)
+git commit -m "feat: describe your change cleanly"
+
+# 6. Push + PR
+git push origin feature/your-feature-name
+```
 
 ---
 
 ## 📄 License
 
-The backend package configuration specifies the **ISC License** (`"license": "ISC"` in `backend/package.json`). Please consult repository ownership regarding commercial licensing and distribution terms.
+Backend declares **ISC License** (`backend/package.json`). Commercial licensing per repository owner.
 
 ---
 
 ## 👤 Author & Links
 
-- **Repository**: [yash-shende99/ShopManager-Smart-Inventory-Management-App](https://github.com/yash-shende99/ShopManager-Smart-Inventory-Management-App)
-- **Live Demo**: [ShopManager Live Application](https://smart-inventory-management-system-frontend.vercel.app/)
-- **Author GitHub**: [@yash-shende99](https://github.com/yash-shende99)
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Repository**
+[ShopManager — Smart Inventory Management App](https://github.com/yash-shende99/ShopManager-Smart-Inventory-Management-App)
+
+**Live Demo**
+[smart-inventory-management-system-frontend.vercel.app](https://smart-inventory-management-system-frontend.vercel.app/)
+
+**Author**
+[@yash-shende99](https://github.com/yash-shende99)
+
+</td>
+<td width="50%" valign="top">
+
+**Stack at a glance**
+
+`React 18` · `Vite 6` · `Tailwind 3` · `Ant Design` · `Framer Motion`
+`Node 18/20` · `Express 5` · `Mongoose 8` · `JWT` · `bcrypt` · `Joi`
+`MongoDB` · `Cloudinary` · `Nodemailer` · `QRScanner` · `jsPDF`
+`Docker` · `Nginx` · `Vercel`
+
+</td>
+</tr>
+</table>
+
+---
+
+<div align="center">
+
+```
+  ╔══════════════════════════════════════════════════════════════════════╗
+  ║                                                                      ║
+  ║                    ▓▓▓▓▓▓░░▓▓▓░▓▓░▓▓▓▓▓░░▓▓▓▓▓░▓▓▓░▓▓▓▓░░▓▓▓         ║
+  ║                    ▓▓▓░░░▓▓▓▓░░░▓▓░░░▓▓▓░░░▓▓▓░▓▓░░░▓▓▓░░▓▓         ║
+  ║                                                                      ║
+  ║              THANK YOU FOR VISITING · SESSION COMPLETE               ║
+  ║                                                                      ║
+  ║                    TERMINAL@SHOPMANAGER:~$ _                         ║
+  ║                                                                      ║
+  ╚══════════════════════════════════════════════════════════════════════╝
+```
+
+<sub>
+
+**SHOPMANAGER · RETAIL OS** — POS · Inventory · Khata · Analytics
+
+*Built for the shopkeepers who still write in notebooks.*
+
+</sub>
+
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     END OF SESSION
+     ═══════════════════════════════════════════════════════════════════════════ -->
