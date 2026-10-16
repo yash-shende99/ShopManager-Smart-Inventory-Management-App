@@ -123,27 +123,6 @@ Small retail merchants and convenience shopkeepers (such as local kirana stores,
 
 ---
 
-## 📸 Screenshots & Visual Tour
-
-The repository includes visual assets demonstrating core workflows:
-
-| Point of Sale & Billing | Product Inventory & Expiry Badges |
-| :---: | :---: |
-| ![Bill Generator](Frontend/public/billgen.png) | ![Product List](Frontend/public/productlist.png) |
-| *Barcode camera scanner, cart itemization, PDF download, and WhatsApp share* | *Searchable catalog with real-time stock levels and expiration indicators* |
-
-| Sales & Analytics Dashboard | Invoice Browser & Calendar Audit |
-| :---: | :---: |
-| ![Sales Analytics](Frontend/public/sales.png) | ![Show Bills Calendar](Frontend/public/showbill.png) |
-| *Embedded MongoDB Charts showing stock turnover and sales metrics* | *Date-picker driven transaction history with daily revenue aggregation* |
-
-| Adding Products to Inventory | Animated Brand Identity |
-| :---: | :---: |
-| ![Add Product Modal](Frontend/public/addproduct.png) | ![ShopManager Logo](Frontend/public/logo.gif) |
-| *Product parameters, supplier linking, reorder levels, and expiration dates* | *ShopManager brand visual asset* |
-
----
-
 ## 🛠️ Technology Stack
 
 ### Frontend
