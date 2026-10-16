@@ -639,11 +639,6 @@ flowchart TD
     Controllers -->|"SMTP"| Gmail
     UI -.->|"Fetch QR"| QRServer
     UI -.->|"Embed"| Charts
-
-    style Client fill:#dbeafe,stroke:#2563eb,stroke-width:2px,color:#000
-    style Gateway fill:#fed7aa,stroke:#ea580c,stroke-width:2px,color:#000
-    style Server fill:#dcfce7,stroke:#16a34a,stroke-width:2px,color:#000
-    style Data fill:#fce7f3,stroke:#db2777,stroke-width:2px,color:#000
 ```
 
 ### 🔒 Multi-Tenant Data Isolation
