@@ -5,25 +5,6 @@
 
 <div align="center">
 
-```
-                                    ╭──────────────────╮
-                                    │  ▓ SCAN · LIVE   │
-                                    ╰────────┬─────────╯
-                                             │
-   ╭─────────────────────────────────────────┴───────────────────────────╮
-   │                                                                     │
-   │     ███████╗██╗  ██╗ ██████╗ ██████╗     ███╗   ███╗ ██████╗ ██████╗ │
-   │     ██╔════╝██║  ██║██╔═══██╗██╔══██╗    ████╗ ████║██╔════╝ ██╔══██╗│
-   │     ███████╗███████║██║   ██║██████╔╝    ██╔████╔██║██║  ███╗██████╔╝│
-   │     ╚════██║██╔══██║██║   ██║██╔═══╝     ██║╚██╔╝██║██║   ██║██╔══██╗│
-   │     ███████║██║  ██║╚██████╔╝██║         ██║ ╚═╝ ██║╚██████╔╝██║  ██║│
-   │     ╚══════╝╚═╝  ╚═╝ ╚═════╝ ╚═╝         ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝│
-   │                                                                     │
-   │              ╾ R E T A I L   O P E R A T I O N S ╼                  │
-   │                                                                     │
-   ╰─────────────────────────────────────────────────────────────────────╯
-```
-
 # 🛒 ShopManager
 
 ### Smart Inventory · Retail POS · Customer Credit Ledger
@@ -54,19 +35,15 @@
 
 ---
 
-<div align="center">
-
 ```
-        ┌─────────┐    ┌─────────┐    ┌─────────┐    ┌─────────┐
-        │  INVENT │ →  │  SCAN   │ →  │  BILL   │ →  │  LEDGER │
-        └─────────┘    └─────────┘    └─────────┘    └─────────┘
-             ↓              ↓              ↓              ↓
-        ┌─────────────────────────────────────────────────────┐
-        │  ▣  8 MongoDB Charts   ▣  WhatsApp   ▣  PDF   ▣   │
-        └─────────────────────────────────────────────────────┘
+┌─────────┐    ┌─────────┐    ┌─────────┐    ┌─────────┐
+│ INVENT  │ →  │  SCAN   │ →  │  BILL   │ →  │ LEDGER  │
+└─────────┘    └─────────┘    └─────────┘    └─────────┘
+     ↓              ↓              ↓              ↓     
+┌──────────────────────────────────────────────────────┐
+│   8 MongoDB Charts   ·   WhatsApp   ·   Vector PDF   │
+└──────────────────────────────────────────────────────┘
 ```
-
-</div>
 
 ---
 
@@ -123,23 +100,19 @@
 
 ### The Problem
 
-<div align="center">
-
 ```
-   ┌──────────────────────────┐   ┌──────────────────────────┐
-   │  📓  PAPER KHATA          │   │  🐢  SLOW CHECKOUT        │
-   │  Lost · damaged · fought  │   │  Manual price lookup      │
-   └──────────────────────────┘   └──────────────────────────┘
-   ┌──────────────────────────┐   ┌──────────────────────────┐
-   │  📦  SILENT STOCKOUTS     │   │  🧾  LOST INVOICES        │
-   │  Expiry unnoticed         │   │  No payable tracking      │
-   └──────────────────────────┘   └──────────────────────────┘
-   ┌──────────────────────────────────────────────────────────┐
-   │  💸  ENTERPRISE POS = ₹5,000+ / year · proprietary HW    │
-   └──────────────────────────────────────────────────────────┘
+┌──────────────────────────┐    ┌──────────────────────────┐
+│  PAPER KHATA             │    │  SLOW CHECKOUT           │
+│  Lost · damaged · fought │    │  Manual price lookup     │
+└──────────────────────────┘    └──────────────────────────┘
+┌──────────────────────────┐    ┌──────────────────────────┐
+│  SILENT STOCKOUTS        │    │  LOST INVOICES           │
+│  Expiry unnoticed        │    │  No payable tracking     │
+└──────────────────────────┘    └──────────────────────────┘
+┌──────────────────────────────────────────────────────────┐
+│  ENTERPRISE POS = ₹5,000+ / year  ·  Proprietary HW      │
+└──────────────────────────────────────────────────────────┘
 ```
-
-</div>
 
 ### The Solution
 
@@ -207,12 +180,13 @@
 
 #### 🎥 **Scan**
 ```
-  ╭─────────────╮
-  │  ▓ ▓ ░ ▓ ▓  │
-  │  ░ ▓ ▓ ░ ▓  │  ← hold QR to camera
-  │  ▓ ░ ▓ ▓ ░  │
-  ╰─────────────╯
-   live · qr-scanner
+╭─────────────────────────╮
+│       ▓ ▓ ░ ▓ ▓         │
+│       ░ ▓ ▓ ░ ▓         │
+│       ▓ ░ ▓ ▓ ░         │
+╰─────────────────────────╯
+  Hold QR code to camera   
+   (live · qr-scanner)     
 ```
 
 </td>
@@ -321,20 +295,20 @@
 <td width="55%" valign="top">
 
 ```
-   ╭─── LEDGER · Ramesh Kirana ─────────────────╮
-   │                                            │
-   │   Lifetime purchases    ₹ 47,850.00        │
-   │   Total paid            ₹ 42,500.00        │
-   │   ────────────────────────────────────     │
-   │   OUTSTANDING           ₹  5,350.00        │
-   │   ⚠ 18 days overdue                        │
-   │                                            │
-   │   Repayments:                              │
-   │     12-Oct  ₹ 2,000  · Cash                │
-   │     05-Oct  ₹ 1,500  · UPI                 │
-   │     28-Sep  ₹ 3,500  · Cash                │
-   │                                            │
-   ╰────────────────────────────────────────────╯
+╭─── LEDGER · Ramesh Kirana ─────────────────╮
+│                                            │
+│   Lifetime purchases        ₹ 47,850.00    │
+│   Total paid                ₹ 42,500.00    │
+│   ──────────────────────────────────────   │
+│   OUTSTANDING               ₹  5,350.00    │
+│   Status: 18 days overdue                  │
+│                                            │
+│   Repayments:                              │
+│     12-Oct  ₹ 2,000  · Cash                │
+│     05-Oct  ₹ 1,500  · UPI                 │
+│     28-Sep  ₹ 3,500  · Cash                │
+│                                            │
+╰────────────────────────────────────────────╯
 ```
 
 </td>
@@ -343,15 +317,15 @@
 #### Actions
 
 ```
-  ╭──────────────────────────────╮
-  │  📧 Send Email Reminder      │
-  ├──────────────────────────────┤
-  │  💬 WhatsApp Nudge           │
-  ├──────────────────────────────┤
-  │  💰 Log Repayment            │
-  ├──────────────────────────────┤
-  │  📄 View Bill History        │
-  ╰──────────────────────────────╯
+╭──────────────────────────────╮
+│  Send Email Reminder         │
+├──────────────────────────────┤
+│  WhatsApp Nudge              │
+├──────────────────────────────┤
+│  Log Repayment               │
+├──────────────────────────────┤
+│  View Bill History           │
+╰──────────────────────────────╯
 ```
 
 </td>
@@ -379,15 +353,15 @@
 <td width="60%" valign="top">
 
 ```
-   ╭─── VENDOR ACCOUNTS ─────────────────────────────────────╮
-   │                                                         │
-   │   Distributor         Date     Owing           Invoice  │
-   │   ─────────────────────────────────────────────────     │
-   │   Sharma Wholesale   14-Oct   ₹ 17,000    📎            │
-   │   Krishna Traders    12-Oct   ₹      0    📎            │
-   │   Patel Distributor  09-Oct   ₹ 26,200    📎            │
-   │                                                         │
-   ╰─────────────────────────────────────────────────────────╯
+╭─── VENDOR ACCOUNTS ────────────────────────────────────╮
+│                                                        │
+│   Distributor         Date     Owing          Invoice  │
+│   ──────────────────────────────────────────────────   │
+│   Sharma Wholesale   14-Oct   ₹ 17,000       Attached  │
+│   Krishna Traders    12-Oct   ₹      0       Attached  │
+│   Patel Distributor  09-Oct   ₹ 26,200       Attached  │
+│                                                        │
+╰────────────────────────────────────────────────────────╯
 ```
 
 </td>
@@ -419,44 +393,44 @@
 <td width="50%" align="top">
 
 ```
-  ┌─ Stock Levels vs Reorder ──────────┐
-  │  ▁▂▃▅▇█▇▅▃▂▁▂▃▅▇                  │
-  └────────────────────────────────────┘
+┌─ Stock Levels vs Reorder ──────────┐
+│  ▁▂▃▅▇█▇▅▃▂▁▂▃▅▇                   │
+└────────────────────────────────────┘
 
-  ┌─ Top-Selling Products ─────────────┐
-  │  ████████████████ Maggi            │
-  │  ████████████     Parle-G          │
-  │  ██████           Amul             │
-  └────────────────────────────────────┘
+┌─ Top-Selling Products ─────────────┐
+│  ████████████████ Maggi            │
+│  ████████████     Parle-G          │
+│  ██████           Amul             │
+└────────────────────────────────────┘
 
-  ┌─ Total Sales / Day ────────────────┐
-  │  ▂▃▅▇█▇▅▃▂ ▂▃▅▇█▇▅▃▂              │
-  └────────────────────────────────────┘
+┌─ Total Sales / Day ────────────────┐
+│  ▂▃▅▇█▇▅▃▂ ▂▃▅▇█▇▅▃▂               │
+└────────────────────────────────────┘
 
-  ┌─ Average Txn / Month ──────────────┐
-  │  ▆▇█▇▆▅▆▇█▇▆▅▆▇█▇▆▅              │
-  └────────────────────────────────────┘
+┌─ Average Txn / Month ──────────────┐
+│  ▆▇█▇▆▅▆▇█▇▆▅▆▇█▇▆▅                │
+└────────────────────────────────────┘
 ```
 
 </td>
 <td width="50%" align="top">
 
 ```
-  ┌─ Product Sales Volume ─────────────┐
-  │  ████████ ██████ ████ ██ █         │
-  └────────────────────────────────────┘
+┌─ Product Sales Volume ─────────────┐
+│  ████████ ██████ ████ ██ █         │
+└────────────────────────────────────┘
 
-  ┌─ Expiration Monitoring ────────────┐
-  │  🟢 342    🟡 28    🔴 4           │
-  └────────────────────────────────────┘
+┌─ Expiration Monitoring ────────────┐
+│  Fresh: 342  |  Near: 28  | Exp: 4 │
+└────────────────────────────────────┘
 
-  ┌─ Stock Status Overview ────────────┐
-  │  ✅ 289   ⚠️ 42   🔴 15            │
-  └────────────────────────────────────┘
+┌─ Stock Status Overview ────────────┐
+│  In Stock: 289 | Low: 42 | Out: 15 │
+└────────────────────────────────────┘
 
-  ┌─ Total Quantity Sold ──────────────┐
-  │  1,247 units this month            │
-  └────────────────────────────────────┘
+┌─ Total Quantity Sold ──────────────┐
+│  1,247 units this month            │
+└────────────────────────────────────┘
 ```
 
 </td>
@@ -473,77 +447,76 @@ Plus 🗓️ **interactive invoice calendar** — filter by day / month with dai
 
 </div>
 
-<div align="center">
-
 ```
-   ╭────────────────────────────────────────────────╮
-   │  📝  NOTES                                     │
-   ├────────────────────────────────────────────────┤
-   │                                                │
-   │  ▸ Return requested — Amul Butter batch A42   │
-   │  ▸ Reorder: Parle-G (qty down to 12)          │
-   │  ▸ Handover: shift change 6pm                 │
-   │  ▸ Call Krishna Traders re: invoice mismatch  │
-   │                                                │
-   ╰────────────────────────────────────────────────╯
-        💾 persisted to localStorage
+╭──────────────────────────────────────────────╮
+│  NOTES                                       │
+├──────────────────────────────────────────────┤
+│                                              │
+│  ▸ Return requested - Amul Butter batch A42  │
+│  ▸ Reorder: Parle-G (qty down to 12)         │
+│  ▸ Handover: shift change 6pm                │
+│  ▸ Call Krishna Traders re: invoice mismatch │
+│                                              │
+╰──────────────────────────────────────────────╯
+     💾 persisted to localStorage
 ```
-
-</div>
 
 ---
 
-## 📸 Screenshots · Visual Tour
+## 📸 Screenshots & Visual Tour
 
 <table>
 <tr>
 <td width="50%" align="center">
 
-#### 🛒 POS Terminal
+#### 🧾 POS Checkout & Fast Billing
+<img src="Frontend/public/billgen.png" alt="Bill Generator" width="100%" />
 
-<img src="Frontend/public/billgen.png" alt="POS Terminal" width="100%" />
-
-<sub>Live camera scan · dynamic cart · one-click receipt</sub>
+<sub>Barcode camera scanner, cart itemization, PDF download, and WhatsApp share</sub>
 
 </td>
 <td width="50%" align="center">
 
-#### 📦 Product Catalog
+#### 📦 Product Inventory & Expiry Badges
+<img src="Frontend/public/productlist.png" alt="Product List" width="100%" />
 
-<img src="Frontend/public/productlist.png" alt="Product Catalog" width="100%" />
-
-<sub>Stock + expiry badges · inline edits · QR print</sub>
+<sub>Searchable catalog with real-time stock levels and expiration indicators</sub>
 
 </td>
 </tr>
 <tr>
 <td width="50%" align="center">
 
-#### ➕ Add Product
-
-<img src="Frontend/public/addproduct.png" alt="Add Product" width="100%" />
-
-<sub>Full metadata intake · supplier · expiry date</sub>
-
-</td>
-<td width="50%" align="center">
-
-#### 📊 Sales Analytics
-
+#### 📊 Sales & Analytics Dashboard
 <img src="Frontend/public/sales.png" alt="Sales Analytics" width="100%" />
 
-<sub>Live MongoDB Charts · auto-refresh dashboard</sub>
+<sub>Embedded MongoDB Charts showing stock turnover and sales metrics</sub>
+
+</td>
+<td width="50%" align="center">
+
+#### 🗓️ Invoice Browser & Calendar Audit
+<img src="Frontend/public/showbill.png" alt="Invoice Archive" width="100%" />
+
+<sub>Date-picker driven transaction history with daily revenue aggregation</sub>
 
 </td>
 </tr>
 <tr>
-<td colspan="2" align="center">
+<td width="50%" align="center">
 
-#### 🧾 Invoice Archive
+#### ➕ Adding Products to Inventory
+<img src="Frontend/public/addproduct.png" alt="Add Product Modal" width="100%" />
 
-<img src="Frontend/public/showbill.png" alt="Invoice Archive" width="80%" />
+<sub>Product parameters, supplier linking, reorder levels, and expiration dates</sub>
 
-<sub>Calendar-filtered invoice history · daily revenue aggregation</sub>
+</td>
+<td width="50%" align="center">
+
+#### ✨ Animated Brand Identity
+<img src="Frontend/public/logo.gif" alt="ShopManager Logo" width="100%" />
+
+<sub>ShopManager animated retail branding asset</sub>
 
 </td>
 </tr>
@@ -937,18 +910,14 @@ Stop: `docker compose down`
 
 ## 📖 User Walkthrough
 
-<div align="center">
-
 ```
-   ┌───────┐    ┌───────┐    ┌───────┐    ┌───────┐    ┌───────┐    ┌───────┐
-   │   ①   │ →  │   ②   │ →  │   ③   │ →  │   ④   │ →  │   ⑤   │ →  │   ⑥   │
-   ├───────┤    ├───────┤    ├───────┤    ├───────┤    ├───────┤    ├───────┤
-   │ Sign  │    │Populate│   │ Print │    │  POS  │    │Manage │    │Review │
-   │  up   │    │catalog│    │  QR   │    │ scan  │    │ khata │    │analyt.│
-   └───────┘    └───────┘    └───────┘    └───────┘    └───────┘    └───────┘
+┌───────┐    ┌───────┐    ┌───────┐    ┌───────┐    ┌───────┐    ┌───────┐
+│   1   │ →  │   2   │ →  │   3   │ →  │   4   │ →  │   5   │ →  │   6   │
+├───────┤    ├───────┤    ├───────┤    ├───────┤    ├───────┤    ├───────┤
+│ Sign  │    │Stock  │    │ Print │    │  POS  │    │Manage │    │Review │
+│  up   │    │Setup  │    │  QR   │    │ scan  │    │ khata │    │analyt.│
+└───────┘    └───────┘    └───────┘    └───────┘    └───────┘    └───────┘
 ```
-
-</div>
 
 **`①`** **Merchant Onboarding** — Register at `/signup` → login at `/login` → 24h JWT stored in `localStorage`.
 
@@ -1398,21 +1367,19 @@ Backend declares **ISC License** (`backend/package.json`). Commercial licensing 
 <div align="center">
 
 ```
-   ╭─────────────────────────────────────────────────────────────────╮
-   │                                                                 │
-   │                    ★  Thank you for visiting  ★                 │
-   │                                                                 │
-   │                                                                 │
-   │                   S H O P M A N A G E R                        │
-   │                                                                 │
-   │        POS · Inventory · Khata · Supplier · Analytics          │
-   │                                                                 │
-   │                                                                 │
-   │                     ╭──────────────────────╮                    │
-   │                     │  ⚡  BUILT FOR RETAIL │                    │
-   │                     ╰──────────────────────╯                    │
-   │                                                                 │
-   ╰─────────────────────────────────────────────────────────────────╯
+╭──────────────────────────────────────────────────────────────────╮
+│                                                                  │
+│                    *  Thank you for visiting  *                  │
+│                                                                  │
+│                   S H O P M A N A G E R                          │
+│                                                                  │
+│          POS · Inventory · Khata · Supplier · Analytics          │
+│                                                                  │
+│                     ╭──────────────────────╮                     │
+│                     │   BUILT FOR RETAIL   │                     │
+│                     ╰──────────────────────╯                     │
+│                                                                  │
+╰──────────────────────────────────────────────────────────────────╯
 ```
 
 <sub>
